@@ -38,5 +38,29 @@ public class DummyMoveOptimizer implements IMoveOptimizer {
 	public void updatePosition() {
 		
 		
+	}
+
+	/**
+	 * @uml.property  name="iRequest"
+	 * @uml.associationEnd  inverse="dummyMoveOptimizer:simulation.elevator.elevator_UI.int_elevator_UI.IRequest"
+	 */
+	private IRequest iRequest;
+
+	/**
+	 * Getter of the property <tt>iRequest</tt>
+	 * @return  Returns the iRequest.
+	 * @uml.property  name="iRequest"
+	 */
+	public IRequest getIRequest() {
+		return iRequest;
+	}
+
+	/**
+	 * Setter of the property <tt>iRequest</tt>
+	 * @param iRequest  The iRequest to set.
+	 * @uml.property  name="iRequest"
+	 */
+	public void setIRequest(IRequest iRequest) {
+		this.iRequest = iRequest;
 	}		
 }
