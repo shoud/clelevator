@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" size="1098,761" id="simulation.elevator.Sequencer.int_sequencer" metadata="uml2-1.0" initialized="true" tag="1000" key="32303037303533312D31303030204170706C69636174696F6E456C657661746F722F7561707631333031383034">
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.1/@sourceConnections.1 //@children.2/@sourceConnections.0" name="ISequencer" location="600,29" size="127,117" id="simulation.elevator.Sequencer.int_sequencer/ISequencer" runTimeClassModel="addprocess([Ljava.lang.Object;),start(),Sequencer(IIII)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="94,54">
+      <children xsi:type="editmodel:MethodEditModel" name="Sequencer" id="simulation.elevator.Sequencer.int_sequencer/ISequencer#Sequencer(IIII)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addprocess" id="simulation.elevator.Sequencer.int_sequencer/ISequencer#addprocess([Ljava.lang.Object;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="start" id="simulation.elevator.Sequencer.int_sequencer/ISequencer#start()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="DummySequencer" location="555,195" size="274,207" id="simulation.elevator.Sequencer.imp_sequencer/DummySequencer" runTimeClassModel="elevator,setITraffic(Lsimulation.elevator.traffic.int_traffic.ITraffic;),AddProcess([Ljava.lang.Object;),getITraffic(),addprocess([Ljava.lang.Object;),start(),DummySequencer(IIII),Start(),Sequencer(IIII),DummySequencer()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="106,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="elevator" id="simulation.elevator.Sequencer.imp_sequencer/DummySequencer#elevator"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="130,126">
+      <children xsi:type="editmodel:MethodEditModel" name="DummySequencer" id="simulation.elevator.Sequencer.imp_sequencer/DummySequencer#DummySequencer()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="DummySequencer" id="simulation.elevator.Sequencer.imp_sequencer/DummySequencer#DummySequencer(IIII)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Sequencer" id="simulation.elevator.Sequencer.imp_sequencer/DummySequencer#Sequencer(IIII)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Start" id="simulation.elevator.Sequencer.imp_sequencer/DummySequencer#Start()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getITraffic" id="simulation.elevator.Sequencer.imp_sequencer/DummySequencer#getITraffic()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setITraffic" id="simulation.elevator.Sequencer.imp_sequencer/DummySequencer#setITraffic(Lsimulation.elevator.traffic.int_traffic.ITraffic;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="start" id="simulation.elevator.Sequencer.imp_sequencer/DummySequencer#start()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="simulation.elevator.Sequencer.int_sequencer/ISequencable&lt;-simulation.elevator.Sequencer.imp_sequencer/DummySequencer" source="//@children.1" target="//@children.4" targetEnd="//@children.1/@sourceConnections.0/@children.1" sourceEnd="//@children.1/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,51" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="144,21"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" id="simulation.elevator.Sequencer.int_sequencer/ISequencer&lt;-simulation.elevator.Sequencer.imp_sequencer/DummySequencer" source="//@children.1" target="//@children.0" targetEnd="//@children.1/@sourceConnections.1/@children.1" sourceEnd="//@children.1/@sourceConnections.1/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="107,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="63,117"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="DummySimulation" location="320,20" size="210,207" id="simulation.elevator.ui.imp_ui/DummySimulation" runTimeClassModel="main([Ljava.lang.String;),resultAnalyser,elevator,traffic,createTraffic(),elevatorUI,sequencer,DummySimulation()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="187,90">
+      <children xsi:type="editmodel:AttributeEditModel" name="resultAnalyser" id="simulation.elevator.ui.imp_ui/DummySimulation#resultAnalyser"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="elevator" id="simulation.elevator.ui.imp_ui/DummySimulation#elevator"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="traffic" id="simulation.elevator.ui.imp_ui/DummySimulation#traffic"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="elevatorUI" id="simulation.elevator.ui.imp_ui/DummySimulation#elevatorUI"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="sequencer" id="simulation.elevator.ui.imp_ui/DummySimulation#sequencer"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="141,72">
+      <children xsi:type="editmodel:MethodEditModel" name="createTraffic" location="14,51" id="simulation.elevator.ui.imp_ui/DummySimulation#createTraffic()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="DummySimulation" id="simulation.elevator.ui.imp_ui/DummySimulation#DummySimulation()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="main" id="simulation.elevator.ui.imp_ui/DummySimulation#main([Ljava.lang.String;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="simulation.elevator.ui.imp_ui/DummySimulation@dummySimulation+simulation.elevator.resultAnalyser.int_resutlAnalyser/IResultAnalyser@iResultAnalyser1" source="//@children.2" target="//@children.0" targetEnd="//@children.2/@sourceConnections.0/@children.1" label="//@children.2/@sourceConnections.0/@children.2" sourceEnd="//@children.2/@sourceConnections.0/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" name="dummySimulation" location="210,67" id="simulation.elevator.ui.imp_ui/DummySimulation@dummySimulation+simulation.elevator.resultAnalyser.int_resutlAnalyser/IResultAnalyser@iResultAnalyser1|simulation.elevator.ui.imp_ui/DummySimulation#dummySimulation" attachSource="true" multiplicityLabel="//@children.2/@sourceConnections.0/@children.0/@children.1" roleLabel="//@children.2/@sourceConnections.0/@children.0/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" + dummySimulation" location="537,67" size="113,13" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="0..1" location="537,94" size="20,13" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="iResultAnalyser1" location="0,58"/>
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,13" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="simulation.elevator.ui.imp_ui/DummySimulation-Standard::Call->simulation.elevator.Sequencer.int_sequencer/SequencerFactory" source="//@children.2" target="//@children.3" targetEnd="//@children.2/@sourceConnections.1/@children.2" label="//@children.2/@sourceConnections.1/@children.0" sourceEnd="//@children.2/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Call»" size="34,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,33" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="178,33"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.2/@sourceConnections.1" name="SequencerFactory" location="45,20" size="178,68" id="simulation.elevator.Sequencer.int_sequencer/SequencerFactory" runTimeClassModel="createSequencer()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="124,18">
+      <children xsi:type="editmodel:MethodEditModel" name="createSequencer" id="simulation.elevator.Sequencer.int_sequencer/SequencerFactory#createSequencer()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.1/@sourceConnections.0 //@children.5/@sourceConnections.0 //@children.7/@sourceConnections.0" name="ISequencable" location="315,225" size="144,43" id="simulation.elevator.Sequencer.int_sequencer/ISequencable" runTimeClassModel="">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="DummyElevator" location="286,315" size="247,135" id="simulation.elevator.elevator.imp_elevator/DummyElevator" runTimeClassModel="setParam(),move(Ljava.lang.Object;),stopNextLevel(),createUI()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="108,72">
+      <children xsi:type="editmodel:MethodEditModel" name="createUI" id="simulation.elevator.elevator.imp_elevator/DummyElevator#createUI()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="move" id="simulation.elevator.elevator.imp_elevator/DummyElevator#move(Ljava.lang.Object;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setParam" id="simulation.elevator.elevator.imp_elevator/DummyElevator#setParam()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="stopNextLevel" id="simulation.elevator.elevator.imp_elevator/DummyElevator#stopNextLevel()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="simulation.elevator.Sequencer.int_sequencer/ISequencable@iSequencable+simulation.elevator.elevator.imp_elevator/DummyElevator@dummyElevator" source="//@children.5" target="//@children.4" targetEnd="//@children.5/@sourceConnections.0/@children.1" label="//@children.5/@sourceConnections.0/@children.2" sourceEnd="//@children.5/@sourceConnections.0/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" name="dummyElevator" location="100,0" id="simulation.elevator.Sequencer.int_sequencer/ISequencable@iSequencable+simulation.elevator.elevator.imp_elevator/DummyElevator@dummyElevator|simulation.elevator.elevator.imp_elevator/DummyElevator#dummyElevator" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="iSequencable" location="71,43" id="simulation.elevator.Sequencer.int_sequencer/ISequencable@iSequencable+simulation.elevator.elevator.imp_elevator/DummyElevator@dummyElevator|simulation.elevator.Sequencer.int_sequencer/ISequencable#iSequencable" multiplicityLabel="//@children.5/@sourceConnections.0/@children.1/@children.1" roleLabel="//@children.5/@sourceConnections.0/@children.1/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - iSequencable" location="393,284" size="85,13" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="0..1" location="359,284" size="20,13" anchorKind="LastPart"/>
+      </children>
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,13" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="simulation.elevator.elevator.imp_elevator/DummyElevator-Standard::Call->simulation.elevator.Sequencer.int_sequencer/SequencableFactory" source="//@children.5" target="//@children.6" targetEnd="//@children.5/@sourceConnections.1/@children.2" label="//@children.5/@sourceConnections.1/@children.0" sourceEnd="//@children.5/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Call»" size="34,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,101" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="195,34"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.5/@sourceConnections.1 //@children.7/@sourceConnections.1" name="SequencableFactory" location="45,382" size="195,68" id="simulation.elevator.Sequencer.int_sequencer/SequencableFactory" runTimeClassModel="createSequencable()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="137,18">
+      <children xsi:type="editmodel:MethodEditModel" name="createSequencable" id="simulation.elevator.Sequencer.int_sequencer/SequencableFactory#createSequencable()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="DummyTraffic" location="45,121" size="220,225" id="simulation.elevator.traffic.imp_traffic/DummyTraffic" runTimeClassModel="Load(Ljava.lang.String;),listUser,getIPushableButton(),DummyTraffic(),DeleteUser(),getList(),AddUser(),logUpdate(),setIPushableButton(Lsimulation.elevator.elevator_UI.int_elevator_UI.IPushableButton;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="102,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="listUser" id="simulation.elevator.traffic.imp_traffic/DummyTraffic#listUser"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="137,144">
+      <children xsi:type="editmodel:MethodEditModel" name="AddUser" id="simulation.elevator.traffic.imp_traffic/DummyTraffic#AddUser()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="DeleteUser" id="simulation.elevator.traffic.imp_traffic/DummyTraffic#DeleteUser()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="DummyTraffic" id="simulation.elevator.traffic.imp_traffic/DummyTraffic#DummyTraffic()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Load" id="simulation.elevator.traffic.imp_traffic/DummyTraffic#Load(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getIPushableButton" id="simulation.elevator.traffic.imp_traffic/DummyTraffic#getIPushableButton()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getList" id="simulation.elevator.traffic.imp_traffic/DummyTraffic#getList()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="logUpdate" id="simulation.elevator.traffic.imp_traffic/DummyTraffic#logUpdate()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setIPushableButton" id="simulation.elevator.traffic.imp_traffic/DummyTraffic#setIPushableButton(Lsimulation.elevator.elevator_UI.int_elevator_UI.IPushableButton;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="simulation.elevator.Sequencer.int_sequencer/ISequencable@iSequencable+simulation.elevator.traffic.imp_traffic/DummyTraffic@dummyTraffic" source="//@children.7" target="//@children.4" targetEnd="//@children.7/@sourceConnections.0/@children.1" label="//@children.7/@sourceConnections.0/@children.2" sourceEnd="//@children.7/@sourceConnections.0/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" name="dummyTraffic" location="220,125" id="simulation.elevator.Sequencer.int_sequencer/ISequencable@iSequencable+simulation.elevator.traffic.imp_traffic/DummyTraffic@dummyTraffic|simulation.elevator.traffic.imp_traffic/DummyTraffic#dummyTraffic" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="iSequencable" location="0,21" id="simulation.elevator.Sequencer.int_sequencer/ISequencable@iSequencable+simulation.elevator.traffic.imp_traffic/DummyTraffic@dummyTraffic|simulation.elevator.Sequencer.int_sequencer/ISequencable#iSequencable" multiplicityLabel="//@children.7/@sourceConnections.0/@children.1/@children.1" roleLabel="//@children.7/@sourceConnections.0/@children.1/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - iSequencable" location="223,262" size="85,13" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="0..1" location="288,235" size="20,13" anchorKind="LastPart"/>
+      </children>
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,13" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="simulation.elevator.traffic.imp_traffic/DummyTraffic-Standard::Call->simulation.elevator.Sequencer.int_sequencer/SequencableFactory" source="//@children.7" target="//@children.6" targetEnd="//@children.7/@sourceConnections.1/@children.2" label="//@children.7/@sourceConnections.1/@children.0" sourceEnd="//@children.7/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Call»" size="34,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="97,225" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="97,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1;Product=eUML2" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showPopupBars="true" showConnectionHandles="true" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" showDependencyStereotype="true" showInterfaceStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>
