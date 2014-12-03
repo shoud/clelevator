@@ -48,7 +48,7 @@ public class DummySimulation {
 		//Elevator
 		elevator = ElevatorConfiguratorFactory.createElevatorConfigurator();
 		//Sequencer
-		sequencer = SequencerFactory.createSequencer(0, 10000, 2, 1);
+		sequencer = SequencerFactory.createSequencer(0, 10000, 1, 1);
 		try {
 			sequencer.addProcess(traffic);
 		} catch (SequencerException e) {
@@ -61,8 +61,8 @@ public class DummySimulation {
 	 */
 	public void createTraffic()
 	{
-		//Permet de crÃ©er le trafic.
-		traffic.addUser(10,10);
+		//Permet de créer un traffic, mais pour les tests en dur dans le constructeur de Traffic.
+		
 	}
 	/**
 	 * Permet de créer un séquenceur.

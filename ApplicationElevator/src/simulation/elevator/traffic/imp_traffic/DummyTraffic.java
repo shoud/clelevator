@@ -11,9 +11,6 @@ package simulation.elevator.traffic.imp_traffic;
 import java.util.ArrayList;
 import java.util.Random;
 
-import simulation.elevator.Sequencer.imp_sequencer.DisplayEvent;
-import simulation.elevator.Sequencer.imp_sequencer.SequencerException;
-import simulation.elevator.Sequencer.int_sequencer.SequencerFactory;
 import simulation.elevator.traffic.int_traffic.ITraffic;
 import simulation.elevator.traffic.int_traffic.IUser;
 
@@ -37,24 +34,18 @@ public class DummyTraffic implements ITraffic {
 		{
 			super();
 			id = 0;
-			//addUser(nbUtilisateur, nbEtage)
-		}
-		/**
-		 * Pour la version bidon, permet de créer une liste d'utilisateur.
-		 */
-		public void addUser(int nbUtilisateur, int nbEtage)
-		{	
-			//Instanciation de la liste d'utilisateur.
-			listUser = new ArrayList<IUser>();
-			
-			DummyUser user;
-			DisplayEvent displayEvent;
-			
+			//Varaibles pour g�rer la creation des utilisateurs
 			int etageDepart, etageArrive;
+			int nbEtage = 10; //Le nombre d'�tages en dure pour les tests.
+			int  nbUtilisateur = 10; //Nombre d'utilisateurs pour les tests.
 			long dateDepart = System.currentTimeMillis();
 			Random rd = new Random();
 			etageDepart = rd.nextInt(nbEtage);
 			
+			//On cr�er des utilisateurs pour la version bidon du programme.
+			//Instanciation de la liste d'utilisateur.
+			listUser = new ArrayList<IUser>();
+			//Boucle pour cr�er les utilisateurs
 			for(int i = 0; i < nbUtilisateur;i++)
 			{
 				//On met à jour l'étage d'arrivé.
@@ -66,8 +57,7 @@ public class DummyTraffic implements ITraffic {
 				dateDepart += 1000;
 				//On ajoute un utilisateur.
 				//Creation d'un nouvel objet "Horloge".
-				user = new DummyUser(id,etageDepart,etageArrive,dateDepart);
-				listUser.add(new DummyUser(id,etageDepart,etageArrive ,dateDepart));
+				addUser(new DummyUser(id,etageDepart,etageArrive ,dateDepart));
 				//On met à jour l'étage de départ du prochain utilisateur.
 				if(etageDepart != nbEtage-1)
 					etageDepart++;
@@ -75,6 +65,14 @@ public class DummyTraffic implements ITraffic {
 					etageDepart = 0;
 				id++;
 			}
+			
+		}
+		/**
+		 * Pour la version bidon, permet de créer une liste d'utilisateur.
+		 */
+		public void addUser(IUser user)
+		{	
+			listUser.add(user);
 		}
 		/**
 		 * Permet de renvoyer la liste d'utilisateur.

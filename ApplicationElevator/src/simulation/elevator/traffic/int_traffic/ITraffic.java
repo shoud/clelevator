@@ -21,6 +21,5 @@ import simulation.elevator.Sequencer.int_sequencer.IEvent;
 public interface ITraffic extends IEvent {
   		/**
 		 */
-		void addUser( int nbUtilisateur, int nbEtage);
-		
+		void addUser(IUser user);
 }
