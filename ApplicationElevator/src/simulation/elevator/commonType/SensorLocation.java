@@ -9,6 +9,7 @@ package simulation.elevator.commonType;
 
 /**
  * Description of the enumeration SensorLocation.
+ * BLABLA
  */
 
 public enum SensorLocation {
