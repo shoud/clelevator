@@ -12,6 +12,7 @@ package simulation.elevator.moveOptimizer.imp_moveOptimizer;
 import java.util.ArrayList;
 
 import simulation.elevator.elevator.int_elevator.IElevatorInfo;
+import simulation.elevator.elevator_UI.imp_elevator_UI.ElevatorUI;
 import simulation.elevator.elevator_UI.imp_elevator_UI.requestFactoryImplementation;
 import simulation.elevator.elevator_UI.int_elevator_UI.IRequest;
 import simulation.elevator.moveOptimizer.int_moveOptimizer.IMoveOptimizer;
@@ -62,5 +63,17 @@ public class DummyMoveOptimizer implements IMoveOptimizer {
 	 */
 	public void setIRequest(IRequest iRequest) {
 		this.iRequest = iRequest;
+	}
+
+	@Override
+	public ElevatorUI getElevatorUI() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setElevatorUI(ElevatorUI elevatorUI) {
+		// TODO Auto-generated method stub
+		
 	}		
 }

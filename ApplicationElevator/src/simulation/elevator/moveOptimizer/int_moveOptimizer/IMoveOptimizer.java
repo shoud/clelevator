@@ -10,6 +10,7 @@ package simulation.elevator.moveOptimizer.int_moveOptimizer;
 // Start of user code to add imports for IMoveOptimizer
  
 import simulation.elevator.elevator_UI.int_elevator_UI.IRequest;
+import simulation.elevator.elevator_UI.imp_elevator_UI.ElevatorUI;
 
 // End of user code
 
@@ -39,6 +40,20 @@ public interface IMoveOptimizer {
      *
      */
     public void updatePosition();
+
+	/**
+	 * @return  Returns the elevatorUI.
+	 * @uml.property  name="elevatorUI"
+	 * @uml.associationEnd  inverse="iMoveOptimizer:simulation.elevator.elevator_UI.imp_elevator_UI.ElevatorUI"
+	 */
+	public ElevatorUI getElevatorUI();
+
+	/**
+	 * Setter of the property <tt>elevatorUI</tt>
+	 * @param elevatorUI  The elevatorUI to set.
+	 * @uml.property  name="elevatorUI"
+	 */
+	public void setElevatorUI(ElevatorUI elevatorUI);
 
 	// Start of user code to add methods for IMoveOptimizer
  

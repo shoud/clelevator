@@ -84,4 +84,27 @@ public class DummySimulation {
 		simu.startSequencer();
 		System.out.println("La simulation est finit");
 	}
+
+	/**
+	 * @uml.property  name="iResultAnalyser"
+	 * @uml.associationEnd  inverse="dummySimulation1:simulation.elevator.resultAnalyser.int_resutlAnalyser.IResultAnalyser"
+	 */
+	private IResultAnalyser iResultAnalyser;
+
+	/**
+	 * Getter of the property <tt>iResultAnalyser</tt>
+	 * @return  Returns the iResultAnalyser.
+	 * @uml.property  name="iResultAnalyser"
+	 */
+	public IResultAnalyser getIResultAnalyser() {
+		return iResultAnalyser;
+	}
+	/**
+	 * Setter of the property <tt>iResultAnalyser</tt>
+	 * @param iResultAnalyser  The iResultAnalyser to set.
+	 * @uml.property  name="iResultAnalyser"
+	 */
+	public void setIResultAnalyser(IResultAnalyser iResultAnalyser) {
+		this.iResultAnalyser = iResultAnalyser;
+	}
 }
