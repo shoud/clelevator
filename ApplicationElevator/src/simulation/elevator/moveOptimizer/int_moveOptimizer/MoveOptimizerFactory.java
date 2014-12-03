@@ -7,14 +7,14 @@
  */
 package simulation.elevator.moveOptimizer.int_moveOptimizer;
 
-import simulation.elevator.elevator_UI.imp_elevator_UI.DummyElevatorUI;
+import simulation.elevator.elevator_UI.imp_elevator_UI.ElevatorUI;
 import simulation.elevator.moveOptimizer.imp_moveOptimizer.MoveOptimizerFactoryImplementation;
 
 
 
 public class MoveOptimizerFactory {
 	
-	public static IMoveOptimizer createMoveOptimizer(DummyElevatorUI dummyElevatorUI)
+	public static IMoveOptimizer createMoveOptimizer(ElevatorUI dummyElevatorUI)
 	{
 		return MoveOptimizerFactoryImplementation.createMoveOptimizer();
 	}

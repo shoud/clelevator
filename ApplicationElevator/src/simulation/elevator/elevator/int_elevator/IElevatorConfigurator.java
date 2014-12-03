@@ -7,8 +7,6 @@
  */
 package simulation.elevator.elevator.int_elevator;
 
-import simulation.elevator.Sequencer.int_sequencer.IEvent;
-
 
 // Start of user code to add imports for IElevatorConfigurator
  
@@ -19,23 +17,12 @@ import simulation.elevator.Sequencer.int_sequencer.IEvent;
  * Description of the interface IElevatorConfigurator.
  */
 
-public interface IElevatorConfigurator extends IEvent {
-    /**
-	 * @uml.property  name="iElevatorConfigurator" default="null"
-	 * @uml.associationEnd  
-	 */
-    public IElevatorConfigurator iElevatorConfigurator = null;
-	
-	// Start of user code to add fields for IElevatorConfigurator
- 
-	// End of user code
+public interface IElevatorConfigurator {
+   
 
-    /**
-     *  Description of the method setParam.
-     *
-     *
-     */
-    public void setParam();
+	public void setParam();/*Direction direction, ElevatorCageState cageState,
+			ElevatorState elevState, long speed, int currentLevel, int levelNb, long distanceBtw);*/
+
 
 	// Start of user code to add methods for IElevatorConfigurator
  

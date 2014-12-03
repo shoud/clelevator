@@ -7,12 +7,11 @@
  */
 package simulation.elevator.elevator_UI.int_elevator_UI;
 
+import simulation.elevator.commonType.Direction;
+
 // Start of user code to add imports for IRequest
  
-import simulation.elevator.commonType.Direction;
-import simulation.elevator.commonType.TypeRequest;
-import simulation.elevator.traffic.imp_traffic.DummyUser;
-import simulation.elevator.moveOptimizer.imp_moveOptimizer.DummyMoveOptimizer;
+
 
 // End of user code
 
@@ -22,11 +21,9 @@ import simulation.elevator.moveOptimizer.imp_moveOptimizer.DummyMoveOptimizer;
  */
 
 public interface IRequest {
-    public Object Floor=null;
-	
-	// Start of user code to add fields for IRequest
- 
-	// End of user code
+    Object floor = null; // floor destination
+   // public Object requestType = null;
+
 
     /**
      *  Description of the method getType.
@@ -34,7 +31,7 @@ public interface IRequest {
      *
      * @return ret
      */
-    public TypeRequest getType();
+   // public TypeRequest getType();
 
     /**
      *  Description of the method getCallType.
@@ -42,7 +39,7 @@ public interface IRequest {
      *
      * @return ret
      */
-    public Direction getCallType();
+   /* public Direction getCallType();*/
 
     /**
      *  Description of the method getLevelSelected.
@@ -51,36 +48,7 @@ public interface IRequest {
      * @return ret
      */
     public int getLevelSelected();
-
-	/**
-	 * @return  Returns the dummyUser.
-	 * @uml.property  name="dummyUser"
-	 * @uml.associationEnd  inverse="iRequest:simulation.elevator.traffic.imp_traffic.DummyUser"
-	 */
-	public DummyUser getDummyUser();
-
-	/**
-	 * Setter of the property <tt>dummyUser</tt>
-	 * @param dummyUser  The dummyUser to set.
-	 * @uml.property  name="dummyUser"
-	 */
-	public void setDummyUser(DummyUser dummyUser);
-
-	/**
-	 * @return  Returns the dummyMoveOptimizer.
-	 * @uml.property  name="dummyMoveOptimizer"
-	 * @uml.associationEnd  inverse="iRequest:simulation.elevator.moveOptimizer.imp_moveOptimizer.DummyMoveOptimizer"
-	 */
-	public DummyMoveOptimizer getDummyMoveOptimizer();
-
-	/**
-	 * Setter of the property <tt>dummyMoveOptimizer</tt>
-	 * @param dummyMoveOptimizer  The dummyMoveOptimizer to set.
-	 * @uml.property  name="dummyMoveOptimizer"
-	 */
-	public void setDummyMoveOptimizer(DummyMoveOptimizer dummyMoveOptimizer);
-
-	// Start of user code to add methods for IRequest
- 
-	// End of user code
+    public Direction getDirection();
+	
+	
 }

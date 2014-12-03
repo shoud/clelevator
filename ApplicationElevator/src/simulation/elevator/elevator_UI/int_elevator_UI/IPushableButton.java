@@ -7,8 +7,6 @@
  */
 package simulation.elevator.elevator_UI.int_elevator_UI;
 
-import simulation.elevator.traffic.imp_traffic.DummyUser;
-
 // Start of user code to add imports for IPushableButton
  
 
@@ -29,51 +27,14 @@ public interface IPushableButton {
  
 	// End of user code
 
-    /**
-     *  Description of the method callElevator.
-     *
-     *
-     * @param currentFloor
-     * @param direction
-     */
+   
     public void callElevator(Object currentFloor, Object direction);
 
-    /**
-     *  Description of the method levelPush.
-     *
-     *
-     * @param level
-     */
     public void levelPush(Object level);
 
-	/**
-	 * @return  Returns the dummyUser.
-	 * @uml.property  name="dummyUser"
-	 * @uml.associationEnd  inverse="iPushableButton1:simulation.elevator.traffic.imp_traffic.DummyUser"
-	 */
-	public DummyUser getDummyUser();
 
-	/**
-	 * Setter of the property <tt>dummyUser</tt>
-	 * @param dummyUser  The dummyUser to set.
-	 * @uml.property  name="dummyUser"
-	 */
-	public void setDummyUser(DummyUser dummyUser);
 
-	/**
-	 * @return  Returns the dummyUser1.
-	 * @uml.property  name="dummyUser1"
-	 * @uml.associationEnd  inverse="iPushableButton2:simulation.elevator.traffic.imp_traffic.DummyUser"
-	 */
-	public DummyUser getDummyUser1();
-
-	/**
-	 * Setter of the property <tt>dummyUser1</tt>
-	 * @param dummyUser1  The dummyUser1 to set.
-	 * @uml.property  name="dummyUser1"
-	 */
-	public void setDummyUser1(DummyUser dummyUser1);
-
+	
 	// Start of user code to add methods for IPushableButton
  
 	// End of user code

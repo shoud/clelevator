@@ -6,8 +6,8 @@ public class ElevatorConfiguratorFactoryImplementation {
 	
 	public static IElevatorConfigurator createElevatorConfigurator()
 	{
-		// TODO : to implement
-		return null;
+		System.out.println("ElevatorConfigurator created");
+		return new DummyElevator();
 	}
 
 }

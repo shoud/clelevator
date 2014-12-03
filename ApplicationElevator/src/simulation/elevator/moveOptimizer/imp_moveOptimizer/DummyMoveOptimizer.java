@@ -9,91 +9,34 @@ package simulation.elevator.moveOptimizer.imp_moveOptimizer;
 
 // Start of user code to add imports for MoveOptimizer
  
-import simulation.elevator.commonType.ElevatorState;
+import java.util.ArrayList;
+
 import simulation.elevator.elevator.int_elevator.IElevatorInfo;
+import simulation.elevator.elevator_UI.imp_elevator_UI.requestFactoryImplementation;
 import simulation.elevator.elevator_UI.int_elevator_UI.IRequest;
-import simulation.elevator.elevator_UI.int_elevator_UI.RequestFactory;
 import simulation.elevator.moveOptimizer.int_moveOptimizer.IMoveOptimizer;
 
 // End of user code
 
 /**
- * Description of the class MoveOptimizer.
+ * Description of the class MoveOptimizer..
  *
  */
 
-public class DummyMoveOptimizer implements IMoveOptimizer, IElevatorInfo {
+public class DummyMoveOptimizer implements IMoveOptimizer {
 
+	IElevatorInfo elevatorInfo;
+	ArrayList<IRequest> listRequest;
+	
 	@Override
-	public void registerRequest(IRequest request) {
-		// TODO Auto-generated method stub
-		RequestFactory.createRequest();
-		
+	public void registerRequest(IRequest request){
+		requestFactoryImplementation.createRequest();
+		listRequest.add(request);
 	}
 
 	@Override
 	public void updatePosition() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public int getCurrentFloor() {
-		return 0;
-	}
-
-	@Override
-	public ElevatorState getState() {
-		return null;
-	}
-
-	/**
-	 * @uml.property  name="iRequest"
-	 * @uml.associationEnd  inverse="dummyMoveOptimizer1:simulation.elevator.elevator_UI.int_elevator_UI.IRequest"
-	 */
-	private IRequest iRequest;
-
-	/**
-	 * Getter of the property <tt>iRequest</tt>
-	 * @return  Returns the iRequest.
-	 * @uml.property  name="iRequest"
-	 */
-	public IRequest getIRequest() {
-		return iRequest;
-	}
-
-	/**
-	 * Setter of the property <tt>iRequest</tt>
-	 * @param iRequest  The iRequest to set.
-	 * @uml.property  name="iRequest"
-	 */
-	public void setIRequest(IRequest iRequest) {
-		this.iRequest = iRequest;
-	}
-
-	/**
-	 * @uml.property  name="iRequest1"
-	 * @uml.associationEnd  inverse="dummyMoveOptimizer1:simulation.elevator.elevator_UI.int_elevator_UI.IRequest"
-	 */
-	private IRequest iRequest1;
-
-	/**
-	 * Getter of the property <tt>iRequest1</tt>
-	 * @return  Returns the iRequest1.
-	 * @uml.property  name="iRequest1"
-	 */
-	public IRequest getIRequest1() {
-		return iRequest1;
-	}
-
-	/**
-	 * Setter of the property <tt>iRequest1</tt>
-	 * @param iRequest1  The iRequest1 to set.
-	 * @uml.property  name="iRequest1"
-	 */
-	public void setIRequest1(IRequest iRequest1) {
-		this.iRequest1 = iRequest1;
-	}
 		
 		
+	}		
 }
