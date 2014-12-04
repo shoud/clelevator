@@ -91,7 +91,6 @@ public class DummyTraffic implements ITraffic {
 				if((user.getDateDepart() < date) && !user.getCalled())
 				{
 					user.setCalled();
-					System.out.println("Appel de l'ascenseur de l'étage : " + user.getEtageDepart());
 				}
 			}
 			

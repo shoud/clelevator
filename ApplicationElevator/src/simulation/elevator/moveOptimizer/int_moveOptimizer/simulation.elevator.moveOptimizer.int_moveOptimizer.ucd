@@ -91,9 +91,9 @@
       <children xsi:type="editmodel:AttributeEditModel" name="pushableButton" id="simulation.elevator.elevator_UI.imp_elevator_UI/ElevatorUI#pushableButton"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel" size="113,72">
-      <children xsi:type="editmodel:MethodEditModel" name="callElevator" id="simulation.elevator.elevator_UI.imp_elevator_UI/ElevatorUI#callElevator(Ljava.lang.Object;Ljava.lang.Object;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="callElevator" id="simulation.elevator.elevator_UI.imp_elevator_UI/ElevatorUI#callElevator(ILjava.lang.Object;)"/>
       <children xsi:type="editmodel:MethodEditModel" name="getLevelSelected" id="simulation.elevator.elevator_UI.imp_elevator_UI/ElevatorUI#getLevelSelected()"/>
-      <children xsi:type="editmodel:MethodEditModel" name="levelPush" id="simulation.elevator.elevator_UI.imp_elevator_UI/ElevatorUI#levelPush(Ljava.lang.Object;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="levelPush" id="simulation.elevator.elevator_UI.imp_elevator_UI/ElevatorUI#levelPush(I)"/>
       <children xsi:type="editmodel:MethodEditModel" name="getDirection" id="simulation.elevator.elevator_UI.imp_elevator_UI/ElevatorUI#getDirection()"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>

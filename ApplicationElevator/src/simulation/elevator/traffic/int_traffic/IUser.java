@@ -7,12 +7,14 @@
  */
 package simulation.elevator.traffic.int_traffic;
 
+import simulation.elevator.elevator_UI.int_elevator_UI.IRequest;
+
 /**
  * Description of the interface IUser.
  *
  */
 
-public interface IUser {
+public interface IUser extends IRequest{
 
 	void display(long T);
 	int getId();

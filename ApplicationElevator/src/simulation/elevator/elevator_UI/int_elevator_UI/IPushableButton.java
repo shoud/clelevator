@@ -7,6 +7,8 @@
  */
 package simulation.elevator.elevator_UI.int_elevator_UI;
 
+import simulation.elevator.commonType.Direction;
+
 // Start of user code to add imports for IPushableButton
  
 
@@ -28,9 +30,9 @@ public interface IPushableButton {
 	// End of user code
 
    
-    public void callElevator(Object currentFloor, Object direction);
+    public void callElevator(int currentFloor, Direction direction);
 
-    public void levelPush(Object level);
+    public void levelPush(int level);
 
 
 

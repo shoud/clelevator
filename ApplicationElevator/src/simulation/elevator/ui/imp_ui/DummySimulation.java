@@ -16,7 +16,7 @@ import simulation.elevator.traffic.int_traffic.ITraffic;
 import simulation.elevator.Sequencer.int_sequencer.ISequencer;
 import simulation.elevator.elevator.int_elevator.IElevatorConfigurator;
 import simulation.elevator.resultAnalyser.int_resutlAnalyser.IResultAnalyser;
-import simulation.elevator.elevator_UI.int_elevator_UI.ConfigElevatorUIFactory;
+import simulation.elevator.elevator_UI.int_elevator_UI.ElevatorUIFactory;
 import simulation.elevator.elevator_UI.int_elevator_UI.IConfigElevatorUI;
 
 
@@ -44,13 +44,14 @@ public class DummySimulation {
 		//Traffic
 		traffic = TrafficFactory.createTraffic();
 		//UI_Elevator
-		elevatorUI = ConfigElevatorUIFactory.createConfigElevatorUI();
+		elevatorUI = ElevatorUIFactory.createElevatorUI();
 		//Elevator
 		elevator = ElevatorConfiguratorFactory.createElevatorConfigurator();
 		//Sequencer
 		sequencer = SequencerFactory.createSequencer(0, 10000, 1, 1);
 		try {
 			sequencer.addProcess(traffic);
+			sequencer.addProcess(elevator);
 		} catch (SequencerException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

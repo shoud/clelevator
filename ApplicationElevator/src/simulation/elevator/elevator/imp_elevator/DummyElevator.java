@@ -139,12 +139,42 @@ public class DummyElevator implements IElevatorCommand, IElevatorConfigurator, I
 		return elevState;
 	}
 
-
-
-
-
-
-
-	
+	@Override
+	public void trigger(long t) {
+		long currentTime = 0;
+		long time = t; // On récupère le temps
+		cageState = ElevatorCageState.CLOSED;
+		elevState = ElevatorState.MOVING; 
+		/* Normalement il faut verifier que les portes soient fermées pour que l'ascenseur bouge 
+		 * et du coup verifier que l'ascenseur bouge pour commencer a le faire bouger.*/
+		int saveLevel = this.currentLevel;
+		if(direction == Direction.UP){
+			
+			while (this.currentLevel != saveLevel+1 && this.currentLevel < this.levelNb){
+				
+				currentTime = System.currentTimeMillis() - time; 		// currentTime = le temps écoulé depuis que l'on a lancé move();
+				long currentDistance = this.speed * currentTime; 		// Nous donne la distance parcouru
+				if(currentDistance >= this.distanceBtw){
+					
+					this.currentLevel++;
+				}
+			}
+			//return; // ************************************************** ????????????????????????????????????
+		}
+		if(direction == Direction.DOWN){
+			
+			while (this.currentLevel != saveLevel-1 && this.currentLevel >= 0){
+				
+				currentTime = System.currentTimeMillis() - time; 		// currentTime = le temps écoulé depuis que l'on a lancé move();
+				long currentDistance = this.speed * currentTime; 		// Nous donne la distance parcouru
+				if(currentDistance >= this.distanceBtw){
+					
+					this.currentLevel--;
+					
+				}
+			}
+			//return; // ************************************************** ????????????????????????????????????
+		}
 		
+	}
 }

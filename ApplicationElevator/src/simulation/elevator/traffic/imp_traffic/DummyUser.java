@@ -9,6 +9,8 @@ package simulation.elevator.traffic.imp_traffic;
 
 import simulation.elevator.Sequencer.int_sequencer.IEvent;
 import simulation.elevator.traffic.int_traffic.IUser;
+import simulation.elevator.commonType.Direction;
+import simulation.elevator.elevator_UI.int_elevator_UI.ElevatorUIFactory;
 import simulation.elevator.elevator_UI.int_elevator_UI.IPushableButton;
 
 // Start of user code to add imports for User
@@ -27,6 +29,7 @@ public class DummyUser implements IUser, IEvent {
 	private long dateDepart;
 	private long dateArrive;
 	private boolean called;
+	
 	
 	/**
 	* Constructor.
@@ -94,7 +97,14 @@ public class DummyUser implements IUser, IEvent {
 	 */
 	public void setCalled()
 	{
+		Direction direction = null;
 		called = true;
+		if((etageDepart - etageFin) > 0)
+			direction = Direction.DOWN;
+		else
+			direction = Direction.UP;
+		//L'utilisateur appui sur le bouton d'appel de l'ascenseur.
+		ElevatorUIFactory.createElevatorUI().callElevator(etageDepart,direction);
 	}
 	/**
 	 * Permet de savoir si l'utilisateur a déjà pris l'ascenseur.
@@ -161,5 +171,15 @@ public class DummyUser implements IUser, IEvent {
 	 */
 	public void setIPushableButton2(IPushableButton iPushableButton2) {
 		this.iPushableButton2 = iPushableButton2;
+	}
+	@Override
+	public int getLevelSelected() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	@Override
+	public Direction getDirection() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

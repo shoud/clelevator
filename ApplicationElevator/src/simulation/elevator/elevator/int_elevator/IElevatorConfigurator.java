@@ -7,6 +7,8 @@
  */
 package simulation.elevator.elevator.int_elevator;
 
+import simulation.elevator.Sequencer.int_sequencer.IEvent;
+
 
 // Start of user code to add imports for IElevatorConfigurator
  
@@ -17,7 +19,7 @@ package simulation.elevator.elevator.int_elevator;
  * Description of the interface IElevatorConfigurator.
  */
 
-public interface IElevatorConfigurator {
+public interface IElevatorConfigurator extends IEvent {
    
 
 	public void setParam();/*Direction direction, ElevatorCageState cageState,

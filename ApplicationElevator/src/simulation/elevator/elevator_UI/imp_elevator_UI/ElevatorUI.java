@@ -10,7 +10,7 @@ package simulation.elevator.elevator_UI.imp_elevator_UI;
 // Start of user code to add imports for ElevatorUI
  
 import simulation.elevator.commonType.Direction;
-import simulation.elevator.elevator_UI.int_elevator_UI.IConfigElevatorUI;
+import simulation.elevator.elevator_UI.int_elevator_UI.IElevatorUI;
 import simulation.elevator.elevator_UI.int_elevator_UI.IPushableButton;
 import simulation.elevator.elevator_UI.int_elevator_UI.IRequest;
 import simulation.elevator.moveOptimizer.int_moveOptimizer.IMoveOptimizer;
@@ -22,7 +22,7 @@ import simulation.elevator.moveOptimizer.int_moveOptimizer.IMoveOptimizer;
  * @uml.dependency   supplier="simulation.elevator.elevator_UI.int_elevator_UI.IConfigElevatorUI"
  */
 
-public class ElevatorUI implements IConfigElevatorUI, IRequest, IPushableButton{
+public class ElevatorUI implements IElevatorUI{
 
 	IPushableButton pushableButton;
 	IRequest request;
@@ -43,19 +43,18 @@ public class ElevatorUI implements IConfigElevatorUI, IRequest, IPushableButton{
 
 
 	@Override
-	public void callElevator(Object currentFloor, Object direction) {
-		
-		
-		moveOptimizer.registerRequest(request);
-		
+	public void callElevator(int currentFloor, Direction direction) {
+		//moveOptimizer.registerRequest(request);
+		System.out.println("Appel de l'ascenseur de l'étage : " + currentFloor);
 	}
 
 
 	@Override
-	public void levelPush(Object level) {
+	public void levelPush(int level) {
 		// TODO Auto-generated method stub
 		
 	}
+
 
 
 	

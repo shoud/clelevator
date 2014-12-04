@@ -14,8 +14,8 @@
   <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.6/@sourceConnections.1" name="IPushableButton" location="615,285" size="165,99" id="simulation.elevator.elevator_UI.int_elevator_UI/IPushableButton" runTimeClassModel="levelPush(Ljava.lang.Object;),callElevator(Ljava.lang.Object;Ljava.lang.Object;),iPushableButton">
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
     <children xsi:type="editmodel:CompartmentEditModel" size="94,36">
-      <children xsi:type="editmodel:MethodEditModel" name="callElevator" id="simulation.elevator.elevator_UI.int_elevator_UI/IPushableButton#callElevator(Ljava.lang.Object;Ljava.lang.Object;)"/>
-      <children xsi:type="editmodel:MethodEditModel" name="levelPush" id="simulation.elevator.elevator_UI.int_elevator_UI/IPushableButton#levelPush(Ljava.lang.Object;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="callElevator" id="simulation.elevator.elevator_UI.int_elevator_UI/IPushableButton#callElevator(Ljava.lang.Object;Lsimulation.elevator.commonType.Direction;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="levelPush" id="simulation.elevator.elevator_UI.int_elevator_UI/IPushableButton#levelPush(I)"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
     <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="simulation.elevator.elevator_UI.int_elevator_UI/IPushableButton@iPushableButton1+simulation.elevator.traffic.imp_traffic/DummyUser@dummyUser1" source="//@children.1" target="//@children.2" targetEnd="//@children.1/@sourceConnections.0/@children.1" label="//@children.1/@sourceConnections.0/@children.2" sourceEnd="//@children.1/@sourceConnections.0/@children.0" connectionRouterKind="Manhattan">
@@ -28,7 +28,7 @@
     </sourceConnections>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
   </children>
-  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.1/@sourceConnections.0" name="DummyUser" location="300,15" size="220,369" id="simulation.elevator.traffic.imp_traffic/DummyUser" runTimeClassModel="display(J),getEtageFin(),dateDepart,getDateArrive(),setDateArrive(J),dateArrive,etageFin,id,DummyUser(IIIJ),getId(),trigger(J),called,getCalled(),etageDepart,setCalled(),getEtageDepart(),getDateDepart()">
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.1/@sourceConnections.0" name="DummyUser" location="300,15" size="220,369" id="simulation.elevator.traffic.imp_traffic/DummyUser" runTimeClassModel="display(J),getEtageFin(),dateDepart,getDateArrive(),setDateArrive(J),dateArrive,etageFin,id,DummyUser(IIIJ),getId(),trigger(J),called,etageDepart,getCalled(),setCalled(),getEtageDepart(),getDateDepart()">
     <children xsi:type="editmodel:CompartmentEditModel" size="112,108">
       <children xsi:type="editmodel:AttributeEditModel" name="id" id="simulation.elevator.traffic.imp_traffic/DummyUser#id"/>
       <children xsi:type="editmodel:AttributeEditModel" name="dateDepart" id="simulation.elevator.traffic.imp_traffic/DummyUser#dateDepart"/>
@@ -53,7 +53,7 @@
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
   </children>
-  <children xsi:type="editmodel:ClassEditModel" name="DummyMoveOptimizer" location="1005,30" size="321,135" id="simulation.elevator.moveOptimizer.imp_moveOptimizer/DummyMoveOptimizer" runTimeClassModel="registerRequest(Lsimulation.elevator.elevator_UI.int_elevator_UI.IRequest;),listRequest,elevatorInfo,updatePosition()">
+  <children xsi:type="editmodel:ClassEditModel" name="DummyMoveOptimizer" location="1005,30" size="321,135" id="simulation.elevator.moveOptimizer.imp_moveOptimizer/DummyMoveOptimizer" runTimeClassModel="registerRequest(Lsimulation.elevator.elevator_UI.int_elevator_UI.IRequest;),elevatorInfo,listRequest,updatePosition()">
     <children xsi:type="editmodel:CompartmentEditModel" size="199,36">
       <children xsi:type="editmodel:AttributeEditModel" name="elevatorInfo" id="simulation.elevator.moveOptimizer.imp_moveOptimizer/DummyMoveOptimizer#elevatorInfo"/>
       <children xsi:type="editmodel:AttributeEditModel" name="listRequest" id="simulation.elevator.moveOptimizer.imp_moveOptimizer/DummyMoveOptimizer#listRequest"/>
@@ -96,10 +96,10 @@
       <children xsi:type="editmodel:AttributeEditModel" name="request" id="simulation.elevator.elevator_UI.imp_elevator_UI/ElevatorUI#request"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel" size="125,72">
-      <children xsi:type="editmodel:MethodEditModel" name="callElevator" id="simulation.elevator.elevator_UI.imp_elevator_UI/ElevatorUI#callElevator(Ljava.lang.Object;Ljava.lang.Object;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="callElevator" id="simulation.elevator.elevator_UI.imp_elevator_UI/ElevatorUI#callElevator(ILjava.lang.Object;)"/>
       <children xsi:type="editmodel:MethodEditModel" name="getDirection" id="simulation.elevator.elevator_UI.imp_elevator_UI/ElevatorUI#getDirection()"/>
       <children xsi:type="editmodel:MethodEditModel" name="getLevelSelected" id="simulation.elevator.elevator_UI.imp_elevator_UI/ElevatorUI#getLevelSelected()"/>
-      <children xsi:type="editmodel:MethodEditModel" name="levelPush" id="simulation.elevator.elevator_UI.imp_elevator_UI/ElevatorUI#levelPush(Ljava.lang.Object;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="levelPush" id="simulation.elevator.elevator_UI.imp_elevator_UI/ElevatorUI#levelPush(I)"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel"/>
     <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="simulation.elevator.elevator_UI.int_elevator_UI/IRequest&lt;-simulation.elevator.elevator_UI.imp_elevator_UI/ElevatorUI" source="//@children.6" target="//@children.0" targetEnd="//@children.6/@sourceConnections.0/@children.1" sourceEnd="//@children.6/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
