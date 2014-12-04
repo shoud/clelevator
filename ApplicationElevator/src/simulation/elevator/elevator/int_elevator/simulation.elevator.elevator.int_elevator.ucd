@@ -1,33 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" size="1203,689" id="simulation.elevator.elevator.int_elevator" metadata="uml2-1.0" initialized="true" tag="1000" key="32303037303533312D31303030204170706C69636174696F6E456C657661746F722F54686F6D6173">
-  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.3/@sourceConnections.0" name="IElevatorCommand" location="45,210" size="163,99" id="simulation.elevator.elevator.int_elevator/IElevatorCommand">
-    <children xsi:type="editmodel:CompartmentEditModel"/>
-    <children xsi:type="editmodel:CompartmentEditModel" size="99,36">
-      <children xsi:type="editmodel:MethodEditModel" name="move" id="simulation.elevator.elevator.int_elevator/IElevatorCommand#move(Ljava.lang.Object;)"/>
-      <children xsi:type="editmodel:MethodEditModel" name="stopNextLevel" id="simulation.elevator.elevator.int_elevator/IElevatorCommand#stopNextLevel()"/>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" size="1013,997" id="simulation.elevator.elevator.int_elevator" metadata="uml2-1.0" initialized="true" tag="1000" key="32303037303533312D31303030204170706C69636174696F6E456C657661746F722F7561707631313033343135">
+  <children xsi:type="editmodel:ClassEditModel" name="ElevatorConfiguratorFactory" location="15,75" size="256,68" id="simulation.elevator.elevator.int_elevator/ElevatorConfiguratorFactory" runTimeClassModel="createElevatorConfigurator()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="178,18">
+      <children xsi:type="editmodel:MethodEditModel" name="createElevatorConfigurator" id="simulation.elevator.elevator.int_elevator/ElevatorConfiguratorFactory#createElevatorConfigurator()"/>
     </children>
-    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
   </children>
-  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.3/@sourceConnections.1" name="IElevatorConfigurator" location="304,45" size="177,81" id="simulation.elevator.elevator.int_elevator/IElevatorConfigurator">
-    <children xsi:type="editmodel:CompartmentEditModel"/>
-    <children xsi:type="editmodel:CompartmentEditModel" size="75,18">
-      <children xsi:type="editmodel:MethodEditModel" name="setParam" id="simulation.elevator.elevator.int_elevator/IElevatorConfigurator#setParam()"/>
+  <children xsi:type="editmodel:ClassEditModel" name="ElevatorFactory" location="628,75" size="161,68" id="simulation.elevator.elevator.int_elevator/ElevatorFactory" runTimeClassModel="createElevator()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="110,18">
+      <children xsi:type="editmodel:MethodEditModel" name="createElevator" id="simulation.elevator.elevator.int_elevator/ElevatorFactory#createElevator()"/>
     </children>
-    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
   </children>
-  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.3/@sourceConnections.2" name="IElevatorInfo" location="570,225" size="128,99" id="simulation.elevator.elevator.int_elevator/IElevatorInfo">
-    <children xsi:type="editmodel:CompartmentEditModel"/>
-    <children xsi:type="editmodel:CompartmentEditModel" size="105,36">
-      <children xsi:type="editmodel:MethodEditModel" name="getCurrentFloor" id="simulation.elevator.elevator.int_elevator/IElevatorInfo#getCurrentFloor()"/>
-      <children xsi:type="editmodel:MethodEditModel" name="getState" id="simulation.elevator.elevator.int_elevator/IElevatorInfo#getState()"/>
-    </children>
-    <children xsi:type="editmodel:CompartmentEditModel"/>
-    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
-  </children>
-  <children xsi:type="editmodel:ClassEditModel" name="DummyElevator" location="285,210" size="216,333" id="simulation.elevator.elevator.imp_elevator/DummyElevator">
-    <children xsi:type="editmodel:CompartmentEditModel" size="176,162">
+  <children xsi:type="editmodel:ClassEditModel" name="DummyElevator" location="525,225" size="247,387" id="simulation.elevator.elevator.imp_elevator/DummyElevator" runTimeClassModel="setElevatorState(Lsimulation.elevator.commonType.ElevatorState;),getCurrentFloor(),speed,getState(),move(Ljava.lang.Object;),direction,DummyElevator(),stopNextLevel(),currentLevel,sensorState,elevState,setParam(),levelNb,trigger(J),sensorLocation,setDirection(Lsimulation.elevator.commonType.Direction;),cageState,distanceBtw">
+    <children xsi:type="editmodel:CompartmentEditModel" size="195,162">
       <children xsi:type="editmodel:AttributeEditModel" name="cageState" id="simulation.elevator.elevator.imp_elevator/DummyElevator#cageState"/>
       <children xsi:type="editmodel:AttributeEditModel" name="currentLevel" id="simulation.elevator.elevator.imp_elevator/DummyElevator#currentLevel"/>
       <children xsi:type="editmodel:AttributeEditModel" name="direction" id="simulation.elevator.elevator.imp_elevator/DummyElevator#direction"/>
@@ -38,27 +28,80 @@
       <children xsi:type="editmodel:AttributeEditModel" name="sensorState" id="simulation.elevator.elevator.imp_elevator/DummyElevator#sensorState"/>
       <children xsi:type="editmodel:AttributeEditModel" name="speed" id="simulation.elevator.elevator.imp_elevator/DummyElevator#speed"/>
     </children>
-    <children xsi:type="editmodel:CompartmentEditModel" size="105,108">
+    <children xsi:type="editmodel:CompartmentEditModel" size="121,162">
       <children xsi:type="editmodel:MethodEditModel" name="DummyElevator" id="simulation.elevator.elevator.imp_elevator/DummyElevator#DummyElevator()"/>
       <children xsi:type="editmodel:MethodEditModel" name="getCurrentFloor" id="simulation.elevator.elevator.imp_elevator/DummyElevator#getCurrentFloor()"/>
       <children xsi:type="editmodel:MethodEditModel" name="getState" id="simulation.elevator.elevator.imp_elevator/DummyElevator#getState()"/>
       <children xsi:type="editmodel:MethodEditModel" name="move" id="simulation.elevator.elevator.imp_elevator/DummyElevator#move(Ljava.lang.Object;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setDirection" id="simulation.elevator.elevator.imp_elevator/DummyElevator#setDirection(Lsimulation.elevator.commonType.Direction;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setElevatorState" id="simulation.elevator.elevator.imp_elevator/DummyElevator#setElevatorState(Lsimulation.elevator.commonType.ElevatorState;)"/>
       <children xsi:type="editmodel:MethodEditModel" name="setParam" id="simulation.elevator.elevator.imp_elevator/DummyElevator#setParam()"/>
       <children xsi:type="editmodel:MethodEditModel" name="stopNextLevel" id="simulation.elevator.elevator.imp_elevator/DummyElevator#stopNextLevel()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="trigger" id="simulation.elevator.elevator.imp_elevator/DummyElevator#trigger(J)"/>
     </children>
-    <children xsi:type="editmodel:CompartmentEditModel"/>
-    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="simulation.elevator.elevator.int_elevator/IElevatorCommand&lt;-simulation.elevator.elevator.imp_elevator/DummyElevator" source="//@children.3" target="//@children.0" targetEnd="//@children.3/@sourceConnections.0/@children.1" sourceEnd="//@children.3/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
-      <children xsi:type="editmodel:AssociationEndEditModel" location="0,49" attachSource="true"/>
-      <children xsi:type="editmodel:AssociationEndEditModel" location="163,49"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="simulation.elevator.elevator.int_elevator/IElevator&lt;-simulation.elevator.elevator.imp_elevator/DummyElevator" source="//@children.2" target="//@children.5" targetEnd="//@children.2/@sourceConnections.0/@children.1" sourceEnd="//@children.2/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,160" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="110,21"/>
     </sourceConnections>
-    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="simulation.elevator.elevator.int_elevator/IElevatorConfigurator&lt;-simulation.elevator.elevator.imp_elevator/DummyElevator" source="//@children.3" target="//@children.1" targetEnd="//@children.3/@sourceConnections.1/@children.1" sourceEnd="//@children.3/@sourceConnections.1/@children.0" connectionRouterKind="Manual">
-      <children xsi:type="editmodel:AssociationEndEditModel" location="107,0" attachSource="true"/>
-      <children xsi:type="editmodel:AssociationEndEditModel" location="88,81"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.4/@sourceConnections.0" name="IEvent" location="18,180" size="268,94" id="simulation.elevator.Sequencer.int_sequencer/IEvent" runTimeClassModel="trigger(J)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="66,18">
+      <children xsi:type="editmodel:MethodEditModel" name="trigger" id="simulation.elevator.Sequencer.int_sequencer/IEvent#trigger(J)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.5/@sourceConnections.1" name="IElevatorConfigurator" location="40,345" size="205,81" id="simulation.elevator.elevator.int_elevator/IElevatorConfigurator" runTimeClassModel="setParam()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="81,18">
+      <children xsi:type="editmodel:MethodEditModel" name="setParam" id="simulation.elevator.elevator.int_elevator/IElevatorConfigurator#setParam()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="simulation.elevator.Sequencer.int_sequencer/IEvent&lt;-simulation.elevator.elevator.int_elevator/IElevatorConfigurator" source="//@children.4" target="//@children.3" targetEnd="//@children.4/@sourceConnections.0/@children.1" sourceEnd="//@children.4/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="102,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="124,94"/>
     </sourceConnections>
-    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="simulation.elevator.elevator.int_elevator/IElevatorInfo&lt;-simulation.elevator.elevator.imp_elevator/DummyElevator" source="//@children.3" target="//@children.2" targetEnd="//@children.3/@sourceConnections.2/@children.1" sourceEnd="//@children.3/@sourceConnections.2/@children.0" connectionRouterKind="Manual">
-      <children xsi:type="editmodel:AssociationEndEditModel" location="216,64" attachSource="true"/>
-      <children xsi:type="editmodel:AssociationEndEditModel" location="0,49"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.2/@sourceConnections.0" name="IElevator" location="323,364" size="110,43" id="simulation.elevator.elevator.int_elevator/IElevator" runTimeClassModel="">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" id="simulation.elevator.elevator.int_elevator/IElevatorCommand&lt;-simulation.elevator.elevator.int_elevator/IElevator" source="//@children.5" target="//@children.7" targetEnd="//@children.5/@sourceConnections.0/@children.1" sourceEnd="//@children.5/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="54,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="76,99"/>
     </sourceConnections>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="simulation.elevator.elevator.int_elevator/IElevatorConfigurator&lt;-simulation.elevator.elevator.int_elevator/IElevator" source="//@children.5" target="//@children.4" targetEnd="//@children.5/@sourceConnections.1/@children.1" sourceEnd="//@children.5/@sourceConnections.1/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,21" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="205,40"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="simulation.elevator.elevator.int_elevator/IElevatorInfo&lt;-simulation.elevator.elevator.int_elevator/IElevator" source="//@children.5" target="//@children.6" targetEnd="//@children.5/@sourceConnections.2/@children.1" sourceEnd="//@children.5/@sourceConnections.2/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="55,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="72,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.5/@sourceConnections.2" name="IElevatorInfo" location="306,473" size="144,135" id="simulation.elevator.elevator.int_elevator/IElevatorInfo" runTimeClassModel="setElevatorState(Lsimulation.elevator.commonType.ElevatorState;),getCurrentFloor(),getState(),setDirection(Lsimulation.elevator.commonType.Direction;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="121,72">
+      <children xsi:type="editmodel:MethodEditModel" name="getCurrentFloor" id="simulation.elevator.elevator.int_elevator/IElevatorInfo#getCurrentFloor()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getState" location="294,520" id="simulation.elevator.elevator.int_elevator/IElevatorInfo#getState()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setDirection" id="simulation.elevator.elevator.int_elevator/IElevatorInfo#setDirection(Lsimulation.elevator.commonType.Direction;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setElevatorState" id="simulation.elevator.elevator.int_elevator/IElevatorInfo#setElevatorState(Lsimulation.elevator.commonType.ElevatorState;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.5/@sourceConnections.0" name="IElevatorCommand" location="302,180" size="185,99" id="simulation.elevator.elevator.int_elevator/IElevatorCommand" runTimeClassModel="move(Ljava.lang.Object;),stopNextLevel()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="108,36">
+      <children xsi:type="editmodel:MethodEditModel" name="move" id="simulation.elevator.elevator.int_elevator/IElevatorCommand#move(Ljava.lang.Object;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="stopNextLevel" id="simulation.elevator.elevator.int_elevator/IElevatorCommand#stopNextLevel()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
   </children>
   <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1;Product=eUML2" autoName="false"/>

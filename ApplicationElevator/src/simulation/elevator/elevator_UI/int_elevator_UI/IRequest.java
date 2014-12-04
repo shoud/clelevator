@@ -21,8 +21,7 @@ import simulation.elevator.commonType.Direction;
  */
 
 public interface IRequest {
-    Object floor = null; // floor destination
-   // public Object requestType = null;
+    
 
 
     /**

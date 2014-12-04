@@ -5,9 +5,9 @@ import simulation.elevator.traffic.int_traffic.IUser;
 
 
 /**
- * @class DisplayEvent Classe dérivé de Event qui permet d'envoyé un evenement en fonction 
- * de la période donnée.
- *
+ * @class   DisplayEvent Classe dérivé de Event qui permet d'envoyé un evenement en fonction   de la période donnée.
+ * @uml.dependency   supplier="simulation.elevator.Sequencer.int_sequencer.IEvent"
+ * @class  DisplayEvent Classe dérivé de Event qui permet d'envoyé un evenement en fonction  de la période donnée.
  */
 public class DisplayEvent implements IEvent
 {
