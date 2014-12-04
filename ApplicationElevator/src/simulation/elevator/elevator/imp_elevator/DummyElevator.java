@@ -7,9 +7,7 @@ import simulation.elevator.commonType.ElevatorCageState;
 import simulation.elevator.commonType.ElevatorState;
 import simulation.elevator.commonType.SensorLocation;
 import simulation.elevator.commonType.SensorState;
-import simulation.elevator.elevator.int_elevator.IElevatorConfigurator;
-import simulation.elevator.elevator.int_elevator.IElevatorCommand;
-import simulation.elevator.elevator.int_elevator.IElevatorInfo;
+import simulation.elevator.elevator.int_elevator.IElevator;
 
 // End of user code
 
@@ -18,10 +16,10 @@ import simulation.elevator.elevator.int_elevator.IElevatorInfo;
  * @uml.dependency   supplier="simulation.elevator.elevator.int_elevator.IElevatorInfo"
  */
 
-public class DummyElevator implements IElevatorCommand, IElevatorConfigurator, IElevatorInfo {
+public class DummyElevator implements IElevator {
 
 	// *** Enum ***
-	Direction direction;
+	Direction direction; //Permet de dire � l'ascenseur dans quel direction aller.
 	ElevatorCageState cageState;
 	ElevatorState elevState;
 	SensorLocation sensorLocation; 		// *** Inutile ? ***
@@ -33,10 +31,7 @@ public class DummyElevator implements IElevatorCommand, IElevatorConfigurator, I
 	int currentLevel;
 	long distanceBtw;
 	
-	DummyElevator(){}
-	
-	@Override
-	public void setParam(){/*Direction direction, ElevatorCageState cageState, ElevatorState elevState, long speed, int currentLevel, int levelNb, long distanceBtw) {*/
+	DummyElevator(){
 		// *** Config Manuel ***
 		this.direction = Direction.UP;// = direction;
 		this.cageState = ElevatorCageState.CLOSED;// = cageState;
@@ -45,6 +40,10 @@ public class DummyElevator implements IElevatorCommand, IElevatorConfigurator, I
 		this.currentLevel = 0; //= currentLevel;
 		this.levelNb = 10; // = levelNb;
 		this.distanceBtw = 2; // =distanceBtw; // Distance entre deux étages;
+	}
+	
+	@Override
+	public void setParam(){/*Direction direction, ElevatorCageState cageState, ElevatorState elevState, long speed, int currentLevel, int levelNb, long distanceBtw) {*/
 		
 	}
 
@@ -142,13 +141,15 @@ public class DummyElevator implements IElevatorCommand, IElevatorConfigurator, I
 	@Override
 	public void trigger(long t) {
 		long currentTime = 0;
-		long time = t; // On récupère le temps
+		long time = System.currentTimeMillis(); // On récupère le temps
 		cageState = ElevatorCageState.CLOSED;
-		elevState = ElevatorState.MOVING; 
+		elevState = ElevatorState.SLEEPING; 
 		/* Normalement il faut verifier que les portes soient fermées pour que l'ascenseur bouge 
 		 * et du coup verifier que l'ascenseur bouge pour commencer a le faire bouger.*/
 		int saveLevel = this.currentLevel;
-		if(direction == Direction.UP){
+		if(direction == Direction.UP && elevState == ElevatorState.MOVING){
+			
+			System.out.println("L'ascenseur monte");
 			
 			while (this.currentLevel != saveLevel+1 && this.currentLevel < this.levelNb){
 				
@@ -161,7 +162,9 @@ public class DummyElevator implements IElevatorCommand, IElevatorConfigurator, I
 			}
 			//return; // ************************************************** ????????????????????????????????????
 		}
-		if(direction == Direction.DOWN){
+		if(direction == Direction.DOWN && elevState == ElevatorState.MOVING){
+			
+			System.out.println("L'ascenseur descent");
 			
 			while (this.currentLevel != saveLevel-1 && this.currentLevel >= 0){
 				
@@ -176,5 +179,15 @@ public class DummyElevator implements IElevatorCommand, IElevatorConfigurator, I
 			//return; // ************************************************** ????????????????????????????????????
 		}
 		
+	}
+
+	@Override
+	public void setDirection(Direction direction) {
+		this.direction = direction;
+	}
+
+	@Override
+	public void setElevatorState(ElevatorState elevatorState) {
+		this.elevState = elevatorState;
 	}
 }

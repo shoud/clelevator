@@ -5,7 +5,7 @@
       <children xsi:type="editmodel:AttributeEditModel" name="listUser" id="simulation.elevator.traffic.imp_traffic/DummyTraffic#listUser"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel" size="97,72">
-      <children xsi:type="editmodel:MethodEditModel" name="DummyTraffic" id="simulation.elevator.traffic.imp_traffic/DummyTraffic#DummyTraffic()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="DummyTraffic" id="simulation.elevator.traffic.imp_traffic/DummyTraffic#DummyTraffic(Lsimulation.elevator.elevator_UI.int_elevator_UI.IElevatorUI;)"/>
       <children xsi:type="editmodel:MethodEditModel" name="addUser" id="simulation.elevator.traffic.imp_traffic/DummyTraffic#addUser(Lsimulation.elevator.traffic.int_traffic.IUser;)"/>
       <children xsi:type="editmodel:MethodEditModel" name="getListUser" id="simulation.elevator.traffic.imp_traffic/DummyTraffic#getListUser()"/>
       <children xsi:type="editmodel:MethodEditModel" name="trigger" id="simulation.elevator.traffic.imp_traffic/DummyTraffic#trigger(J)"/>
@@ -47,7 +47,7 @@
       <children xsi:type="editmodel:AttributeEditModel" name="id" id="simulation.elevator.traffic.imp_traffic/DummyUser#id"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel" size="104,198">
-      <children xsi:type="editmodel:MethodEditModel" name="DummyUser" id="simulation.elevator.traffic.imp_traffic/DummyUser#DummyUser(IIIJ)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="DummyUser" id="simulation.elevator.traffic.imp_traffic/DummyUser#DummyUser()"/>
       <children xsi:type="editmodel:MethodEditModel" name="display" id="simulation.elevator.traffic.imp_traffic/DummyUser#display(J)"/>
       <children xsi:type="editmodel:MethodEditModel" name="getCalled" id="simulation.elevator.traffic.imp_traffic/DummyUser#getCalled()"/>
       <children xsi:type="editmodel:MethodEditModel" name="getDateArrive" id="simulation.elevator.traffic.imp_traffic/DummyUser#getDateArrive()"/>

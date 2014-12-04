@@ -9,15 +9,17 @@ package simulation.elevator.ui.imp_ui;
 
 import simulation.elevator.Sequencer.imp_sequencer.SequencerException;
 import simulation.elevator.Sequencer.int_sequencer.SequencerFactory;
-import simulation.elevator.elevator.int_elevator.ElevatorConfiguratorFactory;
+import simulation.elevator.elevator.int_elevator.ElevatorFactory;
+import simulation.elevator.elevator.int_elevator.IElevator;
+import simulation.elevator.moveOptimizer.int_moveOptimizer.IMoveOptimizer;
+import simulation.elevator.moveOptimizer.int_moveOptimizer.MoveOptimizerFactory;
 import simulation.elevator.resultAnalyser.int_resutlAnalyser.ResultAnalyserFactory;
 import simulation.elevator.traffic.int_traffic.TrafficFactory;
 import simulation.elevator.traffic.int_traffic.ITraffic;
 import simulation.elevator.Sequencer.int_sequencer.ISequencer;
-import simulation.elevator.elevator.int_elevator.IElevatorConfigurator;
 import simulation.elevator.resultAnalyser.int_resutlAnalyser.IResultAnalyser;
 import simulation.elevator.elevator_UI.int_elevator_UI.ElevatorUIFactory;
-import simulation.elevator.elevator_UI.int_elevator_UI.IConfigElevatorUI;
+import simulation.elevator.elevator_UI.int_elevator_UI.IElevatorUI;
 
 
 // Start of user code to add imports for Simulation
@@ -30,9 +32,10 @@ public class DummySimulation {
 
 	IResultAnalyser resultAnalyser;
 	ITraffic traffic;
-	IConfigElevatorUI elevatorUI;
+	IElevatorUI elevatorUI;
 	ISequencer sequencer;
-	IElevatorConfigurator elevator;
+	IElevator elevator;
+	IMoveOptimizer moveOptimizer;
 	
 	/**
 	 * Constructeur de classe simulation
@@ -41,16 +44,19 @@ public class DummySimulation {
 	{
 		//Resultanalyser
 		resultAnalyser = ResultAnalyserFactory.createResultAnalyser();
-		//Traffic
-		traffic = TrafficFactory.createTraffic();
-		//UI_Elevator
-		elevatorUI = ElevatorUIFactory.createElevatorUI();
 		//Elevator
-		elevator = ElevatorConfiguratorFactory.createElevatorConfigurator();
+		elevator = ElevatorFactory.createElevator();
+		//MoveOptimizer
+		moveOptimizer = MoveOptimizerFactory.createMoveOptimizer(elevator);
+		//UI_Elevator
+		elevatorUI = ElevatorUIFactory.createElevatorUI(moveOptimizer);		
+		//Traffic
+		traffic = TrafficFactory.createTraffic(elevatorUI);		
 		//Sequencer
 		sequencer = SequencerFactory.createSequencer(0, 10000, 1, 1);
 		try {
 			sequencer.addProcess(traffic);
+			sequencer.addProcess(moveOptimizer);
 			sequencer.addProcess(elevator);
 		} catch (SequencerException e) {
 			// TODO Auto-generated catch block

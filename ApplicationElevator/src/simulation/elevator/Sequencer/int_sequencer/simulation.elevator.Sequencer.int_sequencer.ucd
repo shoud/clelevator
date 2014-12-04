@@ -33,7 +33,7 @@
     </sourceConnections>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
   </children>
-  <children xsi:type="editmodel:ClassEditModel" name="DummyUser" location="314,270" size="197,369" id="simulation.elevator.traffic.imp_traffic/DummyUser" runTimeClassModel="display(J),getEtageFin(),getDateArrive(),dateDepart,setDateArrive(J),dateArrive,etageFin,id,DummyUser(IIIJ),trigger(J),getId(),called,getCalled(),etageDepart,setCalled(),getEtageDepart(),getDateDepart()">
+  <children xsi:type="editmodel:ClassEditModel" name="DummyUser" location="314,270" size="197,369" id="simulation.elevator.traffic.imp_traffic/DummyUser" runTimeClassModel="display(J),getEtageFin(),getDateArrive(),dateDepart,setDateArrive(J),dateArrive,etageFin,id,DummyUser(IIIJ),trigger(J),getId(),called,etageDepart,getCalled(),setCalled(),getEtageDepart(),getDateDepart()">
     <children xsi:type="editmodel:CompartmentEditModel" size="98,108">
       <children xsi:type="editmodel:AttributeEditModel" name="called" id="simulation.elevator.traffic.imp_traffic/DummyUser#called"/>
       <children xsi:type="editmodel:AttributeEditModel" name="dateArrive" id="simulation.elevator.traffic.imp_traffic/DummyUser#dateArrive"/>
@@ -43,7 +43,7 @@
       <children xsi:type="editmodel:AttributeEditModel" name="id" id="simulation.elevator.traffic.imp_traffic/DummyUser#id"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel" size="104,198">
-      <children xsi:type="editmodel:MethodEditModel" name="DummyUser" id="simulation.elevator.traffic.imp_traffic/DummyUser#DummyUser(IIIJ)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="DummyUser" id="simulation.elevator.traffic.imp_traffic/DummyUser#DummyUser()"/>
       <children xsi:type="editmodel:MethodEditModel" name="display" id="simulation.elevator.traffic.imp_traffic/DummyUser#display(J)"/>
       <children xsi:type="editmodel:MethodEditModel" name="getCalled" id="simulation.elevator.traffic.imp_traffic/DummyUser#getCalled()"/>
       <children xsi:type="editmodel:MethodEditModel" name="getDateArrive" id="simulation.elevator.traffic.imp_traffic/DummyUser#getDateArrive()"/>

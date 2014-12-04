@@ -46,7 +46,7 @@
       <children xsi:type="editmodel:MethodEditModel" name="trigger" id="simulation.elevator.traffic.imp_traffic/DummyUser#trigger(J)"/>
       <children xsi:type="editmodel:MethodEditModel" name="getDateDepart" id="simulation.elevator.traffic.imp_traffic/DummyUser#getDateDepart()"/>
       <children xsi:type="editmodel:MethodEditModel" name="setCalled" id="simulation.elevator.traffic.imp_traffic/DummyUser#setCalled()"/>
-      <children xsi:type="editmodel:MethodEditModel" name="DummyUser" id="simulation.elevator.traffic.imp_traffic/DummyUser#DummyUser(IIIJ)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="DummyUser" id="simulation.elevator.traffic.imp_traffic/DummyUser#DummyUser()"/>
       <children xsi:type="editmodel:MethodEditModel" name="setDateArrive" id="simulation.elevator.traffic.imp_traffic/DummyUser#setDateArrive(J)"/>
       <children xsi:type="editmodel:MethodEditModel" name="getCalled" id="simulation.elevator.traffic.imp_traffic/DummyUser#getCalled()"/>
     </children>
@@ -59,7 +59,7 @@
       <children xsi:type="editmodel:AttributeEditModel" name="listRequest" id="simulation.elevator.moveOptimizer.imp_moveOptimizer/DummyMoveOptimizer#listRequest"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel" size="116,36">
-      <children xsi:type="editmodel:MethodEditModel" name="registerRequest" id="simulation.elevator.moveOptimizer.imp_moveOptimizer/DummyMoveOptimizer#registerRequest(Lsimulation.elevator.elevator_UI.int_elevator_UI.IRequest;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="registerRequest" id="simulation.elevator.moveOptimizer.imp_moveOptimizer/DummyMoveOptimizer#registerCallLevel(Lsimulation.elevator.elevator_UI.int_elevator_UI.IRequest;)"/>
       <children xsi:type="editmodel:MethodEditModel" name="updatePosition" id="simulation.elevator.moveOptimizer.imp_moveOptimizer/DummyMoveOptimizer#updatePosition()"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>

@@ -12,7 +12,6 @@ package simulation.elevator.elevator_UI.imp_elevator_UI;
 import simulation.elevator.commonType.Direction;
 import simulation.elevator.elevator_UI.int_elevator_UI.IElevatorUI;
 import simulation.elevator.moveOptimizer.int_moveOptimizer.IMoveOptimizer;
-import simulation.elevator.moveOptimizer.int_moveOptimizer.MoveOptimizerFactory;
 
 // End of user code
 
@@ -23,7 +22,11 @@ import simulation.elevator.moveOptimizer.int_moveOptimizer.MoveOptimizerFactory;
 
 public class ElevatorUI implements IElevatorUI{
 
-	IMoveOptimizer moveOptimizer = MoveOptimizerFactory.createMoveOptimizer(this);
+	IMoveOptimizer moveOptimizer;
+	
+	public ElevatorUI(IMoveOptimizer moveOptimizer) {
+		this.moveOptimizer = moveOptimizer;
+	}
 	
 	@Override
 	public int getLevelSelected() {
@@ -41,8 +44,10 @@ public class ElevatorUI implements IElevatorUI{
 
 	@Override
 	public void callElevator(int currentFloor, Direction direction) {
-		//moveOptimizer.registerRequest(request);
-		System.out.println("Appel de l'ascenseur de l'étage : " + currentFloor);
+		if(moveOptimizer == null)
+			System.out.println("Le moveOptimizer existe pas");
+		else
+			moveOptimizer.registerCallLevel(currentFloor,direction);
 	}
 
 

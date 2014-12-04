@@ -22,7 +22,7 @@ import simulation.elevator.Sequencer.int_sequencer.ISequencer;
  * @uml.dependency   supplier="simulation.elevator.elevator.int_elevator.IElevatorCommand"
  */
 
-public class DummySequencer implements ISequencer
+public class Sequencer implements ISequencer
 {
 		//Quand commencer la simulation.	
 		protected static long debut;
@@ -41,7 +41,7 @@ public class DummySequencer implements ISequencer
 		//Le vector comportant tout les processus à executer.
 		protected static ArrayList<Processus> listProcess;
 	
-	public DummySequencer(long simulationTimeOrigin,long simulationDuration, int simulationTimeExpansion, int simulationTimeContraction) {
+	public Sequencer(long simulationTimeOrigin,long simulationDuration, int simulationTimeExpansion, int simulationTimeContraction) {
 		//On récupere les variables données en paramètre.
 		debut = simulationTimeOrigin;
 		temps = simulationDuration;	

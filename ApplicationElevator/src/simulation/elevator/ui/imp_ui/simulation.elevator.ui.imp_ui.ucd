@@ -104,7 +104,7 @@
     </sourceConnections>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
   </children>
-  <children xsi:type="editmodel:ClassEditModel" name="DummyResultAnalyser" location="1095,330" size="313,225" id="simulation.elevator.resultAnalyser.imp_resultAnalyser/DummyResultAnalyser" runTimeClassModel="Operation1(),Load(Ljava.lang.String;),setITraffic(Lsimulation.elevator.traffic.int_traffic.ITraffic;),Analyse(Lsimulation.elevator.traffic.imp_traffic.DummyUser;),CreateFile(Ljava.lang.String;),getITraffic(),getDummySimulation(),DummyResultAnalyser(),setDummySimulation(Lsimulation.elevator.ui.imp_ui.DummySimulation;)">
+  <children xsi:type="editmodel:ClassEditModel" name="DummyResultAnalyser" location="1095,330" size="313,225" id="simulation.elevator.resultAnalyser.imp_resultAnalyser/DummyResultAnalyser" runTimeClassModel="Load(Ljava.lang.String;),Operation1(),setITraffic(Lsimulation.elevator.traffic.int_traffic.ITraffic;),Analyse(Lsimulation.elevator.traffic.imp_traffic.DummyUser;),getDummySimulation(),getITraffic(),CreateFile(Ljava.lang.String;),DummyResultAnalyser(),setDummySimulation(Lsimulation.elevator.ui.imp_ui.DummySimulation;)">
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
     <children xsi:type="editmodel:CompartmentEditModel" size="152,162">
       <children xsi:type="editmodel:MethodEditModel" name="Analyse" id="simulation.elevator.resultAnalyser.imp_resultAnalyser/DummyResultAnalyser#Analyse(Lsimulation.elevator.traffic.imp_traffic.DummyUser;)"/>
@@ -124,23 +124,23 @@
     </sourceConnections>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
   </children>
-  <children xsi:type="editmodel:ClassEditModel" name="DummySequencer" location="0,195" size="274,243" id="simulation.elevator.Sequencer.imp_sequencer/DummySequencer" runTimeClassModel="elevator,setITraffic(Lsimulation.elevator.traffic.int_traffic.ITraffic;),AddProcess([Ljava.lang.Object;),getITraffic(),addprocess([Ljava.lang.Object;),start(),DummySequencer(IIII),Start(),Sequencer(IIII),DummySequencer()">
+  <children xsi:type="editmodel:ClassEditModel" name="DummySequencer" location="0,195" size="274,243" id="simulation.elevator.Sequencer.imp_sequencer/Sequencer" runTimeClassModel="elevator,AddProcess([Ljava.lang.Object;),setITraffic(Lsimulation.elevator.traffic.int_traffic.ITraffic;),addprocess([Ljava.lang.Object;),getITraffic(),start(),DummySequencer(IIII),Start(),Sequencer(IIII),DummySequencer()">
     <children xsi:type="editmodel:CompartmentEditModel" size="106,18">
-      <children xsi:type="editmodel:AttributeEditModel" name="elevator" id="simulation.elevator.Sequencer.imp_sequencer/DummySequencer#elevator"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="elevator" id="simulation.elevator.Sequencer.imp_sequencer/Sequencer#elevator"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel" size="130,162">
-      <children xsi:type="editmodel:MethodEditModel" name="AddProcess" id="simulation.elevator.Sequencer.imp_sequencer/DummySequencer#AddProcess([Ljava.lang.Object;)"/>
-      <children xsi:type="editmodel:MethodEditModel" name="DummySequencer" id="simulation.elevator.Sequencer.imp_sequencer/DummySequencer#DummySequencer()"/>
-      <children xsi:type="editmodel:MethodEditModel" name="DummySequencer" id="simulation.elevator.Sequencer.imp_sequencer/DummySequencer#DummySequencer(IIII)"/>
-      <children xsi:type="editmodel:MethodEditModel" name="Sequencer" id="simulation.elevator.Sequencer.imp_sequencer/DummySequencer#Sequencer(IIII)"/>
-      <children xsi:type="editmodel:MethodEditModel" name="Start" id="simulation.elevator.Sequencer.imp_sequencer/DummySequencer#Start()"/>
-      <children xsi:type="editmodel:MethodEditModel" name="addprocess" id="simulation.elevator.Sequencer.imp_sequencer/DummySequencer#addprocess([Ljava.lang.Object;)"/>
-      <children xsi:type="editmodel:MethodEditModel" name="getITraffic" id="simulation.elevator.Sequencer.imp_sequencer/DummySequencer#getITraffic()"/>
-      <children xsi:type="editmodel:MethodEditModel" name="setITraffic" id="simulation.elevator.Sequencer.imp_sequencer/DummySequencer#setITraffic(Lsimulation.elevator.traffic.int_traffic.ITraffic;)"/>
-      <children xsi:type="editmodel:MethodEditModel" name="start" id="simulation.elevator.Sequencer.imp_sequencer/DummySequencer#start()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="AddProcess" id="simulation.elevator.Sequencer.imp_sequencer/Sequencer#AddProcess([Ljava.lang.Object;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="DummySequencer" id="simulation.elevator.Sequencer.imp_sequencer/Sequencer#Sequencer()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="DummySequencer" id="simulation.elevator.Sequencer.imp_sequencer/Sequencer#Sequencer(IIII)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Sequencer" id="simulation.elevator.Sequencer.imp_sequencer/Sequencer#Sequencer(IIII)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Start" id="simulation.elevator.Sequencer.imp_sequencer/Sequencer#Start()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addprocess" id="simulation.elevator.Sequencer.imp_sequencer/Sequencer#addprocess([Ljava.lang.Object;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getITraffic" id="simulation.elevator.Sequencer.imp_sequencer/Sequencer#getITraffic()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setITraffic" id="simulation.elevator.Sequencer.imp_sequencer/Sequencer#setITraffic(Lsimulation.elevator.traffic.int_traffic.ITraffic;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="start" id="simulation.elevator.Sequencer.imp_sequencer/Sequencer#start()"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
-    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="simulation.elevator.Sequencer.int_sequencer/ISequencer&lt;-simulation.elevator.Sequencer.imp_sequencer/DummySequencer" source="//@children.6" target="//@children.2" targetEnd="//@children.6/@sourceConnections.0/@children.1" sourceEnd="//@children.6/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="simulation.elevator.Sequencer.int_sequencer/ISequencer&lt;-simulation.elevator.Sequencer.imp_sequencer/Sequencer" source="//@children.6" target="//@children.2" targetEnd="//@children.6/@sourceConnections.0/@children.1" sourceEnd="//@children.6/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
       <children xsi:type="editmodel:AssociationEndEditModel" location="159,0" attachSource="true"/>
       <children xsi:type="editmodel:AssociationEndEditModel" location="114,130"/>
     </sourceConnections>
@@ -152,14 +152,14 @@
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
   </children>
-  <children xsi:type="editmodel:ClassEditModel" name="DummyTraffic" location="30,570" size="220,225" id="simulation.elevator.traffic.imp_traffic/DummyTraffic" runTimeClassModel="Load(Ljava.lang.String;),listUser,getIPushableButton(),DummyTraffic(),DeleteUser(),getList(),AddUser(),logUpdate(),setIPushableButton(Lsimulation.elevator.elevator_UI.int_elevator_UI.IPushableButton;)">
+  <children xsi:type="editmodel:ClassEditModel" name="DummyTraffic" location="30,570" size="220,225" id="simulation.elevator.traffic.imp_traffic/DummyTraffic" runTimeClassModel="listUser,Load(Ljava.lang.String;),getIPushableButton(),DummyTraffic(),DeleteUser(),AddUser(),getList(),logUpdate(),setIPushableButton(Lsimulation.elevator.elevator_UI.int_elevator_UI.IPushableButton;)">
     <children xsi:type="editmodel:CompartmentEditModel" size="102,18">
       <children xsi:type="editmodel:AttributeEditModel" name="listUser" id="simulation.elevator.traffic.imp_traffic/DummyTraffic#listUser"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel" size="137,144">
       <children xsi:type="editmodel:MethodEditModel" name="AddUser" id="simulation.elevator.traffic.imp_traffic/DummyTraffic#AddUser()"/>
       <children xsi:type="editmodel:MethodEditModel" name="DeleteUser" id="simulation.elevator.traffic.imp_traffic/DummyTraffic#DeleteUser()"/>
-      <children xsi:type="editmodel:MethodEditModel" name="DummyTraffic" id="simulation.elevator.traffic.imp_traffic/DummyTraffic#DummyTraffic()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="DummyTraffic" id="simulation.elevator.traffic.imp_traffic/DummyTraffic#DummyTraffic(Lsimulation.elevator.elevator_UI.int_elevator_UI.IElevatorUI;)"/>
       <children xsi:type="editmodel:MethodEditModel" name="Load" id="simulation.elevator.traffic.imp_traffic/DummyTraffic#Load(Ljava.lang.String;)"/>
       <children xsi:type="editmodel:MethodEditModel" name="getIPushableButton" id="simulation.elevator.traffic.imp_traffic/DummyTraffic#getIPushableButton()"/>
       <children xsi:type="editmodel:MethodEditModel" name="getList" id="simulation.elevator.traffic.imp_traffic/DummyTraffic#getList()"/>
@@ -176,7 +176,7 @@
   <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.0/@sourceConnections.4" name="TrafficFactory" location="255,465" size="214,81" id="simulation.elevator.traffic.int_traffic/TrafficFactory" runTimeClassModel="createTraffic()">
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
     <children xsi:type="editmodel:CompartmentEditModel" size="97,18">
-      <children xsi:type="editmodel:MethodEditModel" name="createTraffic" id="simulation.elevator.traffic.int_traffic/TrafficFactory#createTraffic()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="createTraffic" id="simulation.elevator.traffic.int_traffic/TrafficFactory#createTraffic(Lsimulation.elevator.elevator_UI.int_elevator_UI.IElevatorUI;)"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>

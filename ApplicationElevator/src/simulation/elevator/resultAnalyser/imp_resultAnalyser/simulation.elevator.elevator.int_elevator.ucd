@@ -61,7 +61,7 @@
   <children xsi:type="editmodel:ClassEditModel" name="DummyMoveOptimizer" location="800,227" size="321,135" id="simulation.elevator.moveOptimizer.imp_moveOptimizer/DummyMoveOptimizer" runTimeClassModel="registerRequest(Lsimulation.elevator.elevator_UI.int_elevator_UI.IRequest;),getCurrentFloor(),getState(),updatePosition()">
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
     <children xsi:type="editmodel:CompartmentEditModel" size="117,72">
-      <children xsi:type="editmodel:MethodEditModel" name="registerRequest" id="simulation.elevator.moveOptimizer.imp_moveOptimizer/DummyMoveOptimizer#registerRequest(Lsimulation.elevator.elevator_UI.int_elevator_UI.IRequest;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="registerRequest" id="simulation.elevator.moveOptimizer.imp_moveOptimizer/DummyMoveOptimizer#registerCallLevel(Lsimulation.elevator.elevator_UI.int_elevator_UI.IRequest;)"/>
       <children xsi:type="editmodel:MethodEditModel" name="updatePosition" id="simulation.elevator.moveOptimizer.imp_moveOptimizer/DummyMoveOptimizer#updatePosition()"/>
       <children xsi:type="editmodel:MethodEditModel" name="getCurrentFloor" id="simulation.elevator.moveOptimizer.imp_moveOptimizer/DummyMoveOptimizer#getCurrentFloor()"/>
       <children xsi:type="editmodel:MethodEditModel" name="getState" id="simulation.elevator.moveOptimizer.imp_moveOptimizer/DummyMoveOptimizer#getState()"/>
@@ -119,23 +119,23 @@
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
   </children>
-  <children xsi:type="editmodel:ClassEditModel" name="DummySequencer" location="1,80" size="274,243" id="simulation.elevator.Sequencer.imp_sequencer/DummySequencer" runTimeClassModel="elevator,setITraffic(Lsimulation.elevator.traffic.int_traffic.ITraffic;),AddProcess([Ljava.lang.Object;),getITraffic(),addprocess([Ljava.lang.Object;),start(),DummySequencer(IIII),Start(),Sequencer(IIII),DummySequencer()">
+  <children xsi:type="editmodel:ClassEditModel" name="DummySequencer" location="1,80" size="274,243" id="simulation.elevator.Sequencer.imp_sequencer/Sequencer" runTimeClassModel="elevator,setITraffic(Lsimulation.elevator.traffic.int_traffic.ITraffic;),AddProcess([Ljava.lang.Object;),getITraffic(),addprocess([Ljava.lang.Object;),start(),DummySequencer(IIII),Start(),Sequencer(IIII),DummySequencer()">
     <children xsi:type="editmodel:CompartmentEditModel" size="106,18">
-      <children xsi:type="editmodel:AttributeEditModel" name="elevator" id="simulation.elevator.Sequencer.imp_sequencer/DummySequencer#elevator"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="elevator" id="simulation.elevator.Sequencer.imp_sequencer/Sequencer#elevator"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel" size="130,162">
-      <children xsi:type="editmodel:MethodEditModel" name="AddProcess" location="-2,65" id="simulation.elevator.Sequencer.imp_sequencer/DummySequencer#AddProcess([Ljava.lang.Object;)"/>
-      <children xsi:type="editmodel:MethodEditModel" name="DummySequencer" id="simulation.elevator.Sequencer.imp_sequencer/DummySequencer#DummySequencer()"/>
-      <children xsi:type="editmodel:MethodEditModel" name="DummySequencer" id="simulation.elevator.Sequencer.imp_sequencer/DummySequencer#DummySequencer(IIII)"/>
-      <children xsi:type="editmodel:MethodEditModel" name="Sequencer" id="simulation.elevator.Sequencer.imp_sequencer/DummySequencer#Sequencer(IIII)"/>
-      <children xsi:type="editmodel:MethodEditModel" name="Start" location="16,147" id="simulation.elevator.Sequencer.imp_sequencer/DummySequencer#Start()"/>
-      <children xsi:type="editmodel:MethodEditModel" name="addprocess" id="simulation.elevator.Sequencer.imp_sequencer/DummySequencer#addprocess([Ljava.lang.Object;)"/>
-      <children xsi:type="editmodel:MethodEditModel" name="getITraffic" id="simulation.elevator.Sequencer.imp_sequencer/DummySequencer#getITraffic()"/>
-      <children xsi:type="editmodel:MethodEditModel" name="setITraffic" id="simulation.elevator.Sequencer.imp_sequencer/DummySequencer#setITraffic(Lsimulation.elevator.traffic.int_traffic.ITraffic;)"/>
-      <children xsi:type="editmodel:MethodEditModel" name="start" id="simulation.elevator.Sequencer.imp_sequencer/DummySequencer#start()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="AddProcess" location="-2,65" id="simulation.elevator.Sequencer.imp_sequencer/Sequencer#AddProcess([Ljava.lang.Object;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="DummySequencer" id="simulation.elevator.Sequencer.imp_sequencer/Sequencer#Sequencer()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="DummySequencer" id="simulation.elevator.Sequencer.imp_sequencer/Sequencer#Sequencer(IIII)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Sequencer" id="simulation.elevator.Sequencer.imp_sequencer/Sequencer#Sequencer(IIII)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Start" location="16,147" id="simulation.elevator.Sequencer.imp_sequencer/Sequencer#Start()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addprocess" id="simulation.elevator.Sequencer.imp_sequencer/Sequencer#addprocess([Ljava.lang.Object;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getITraffic" id="simulation.elevator.Sequencer.imp_sequencer/Sequencer#getITraffic()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setITraffic" id="simulation.elevator.Sequencer.imp_sequencer/Sequencer#setITraffic(Lsimulation.elevator.traffic.int_traffic.ITraffic;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="start" id="simulation.elevator.Sequencer.imp_sequencer/Sequencer#start()"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel"/>
-    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" id="simulation.elevator.Sequencer.int_sequencer/ISequencable&lt;-simulation.elevator.Sequencer.imp_sequencer/DummySequencer" source="//@children.8" target="//@children.7" targetEnd="//@children.8/@sourceConnections.0/@children.1" sourceEnd="//@children.8/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" id="simulation.elevator.Sequencer.int_sequencer/ISequencable&lt;-simulation.elevator.Sequencer.imp_sequencer/Sequencer" source="//@children.8" target="//@children.7" targetEnd="//@children.8/@sourceConnections.0/@children.1" sourceEnd="//@children.8/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
       <children xsi:type="editmodel:AssociationEndEditModel" location="128,243" attachSource="true"/>
       <children xsi:type="editmodel:AssociationEndEditModel" location="113,0"/>
     </sourceConnections>

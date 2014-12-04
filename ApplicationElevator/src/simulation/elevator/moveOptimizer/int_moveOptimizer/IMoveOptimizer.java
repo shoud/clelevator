@@ -9,7 +9,8 @@ package simulation.elevator.moveOptimizer.int_moveOptimizer;
 
 // Start of user code to add imports for IMoveOptimizer
  
-import simulation.elevator.elevator_UI.int_elevator_UI.IRequest;
+import simulation.elevator.Sequencer.int_sequencer.IEvent;
+import simulation.elevator.commonType.Direction;
 import simulation.elevator.elevator_UI.imp_elevator_UI.ElevatorUI;
 
 // End of user code
@@ -19,7 +20,7 @@ import simulation.elevator.elevator_UI.imp_elevator_UI.ElevatorUI;
  *
  */
 
-public interface IMoveOptimizer {
+public interface IMoveOptimizer extends IEvent {
     
 	
 	// Start of user code to add fields for IMoveOptimizer
@@ -32,7 +33,7 @@ public interface IMoveOptimizer {
      *
      * @param request
      */
-    public void registerRequest(IRequest request);
+    public void registerCallLevel(int level, Direction direction);
 
     /**
      *  Description of the method updatePosition.

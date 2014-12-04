@@ -11,6 +11,7 @@ package simulation.elevator.traffic.imp_traffic;
 import java.util.ArrayList;
 import java.util.Random;
 
+import simulation.elevator.elevator_UI.int_elevator_UI.IElevatorUI;
 import simulation.elevator.traffic.int_traffic.ITraffic;
 import simulation.elevator.traffic.int_traffic.IUser;
 
@@ -30,7 +31,7 @@ public class DummyTraffic implements ITraffic {
 		 * Constructeur de la classe trafic.
 		 * Itialisation de id à 0.
 		 */
-		public DummyTraffic()
+		public DummyTraffic(IElevatorUI elevatorUI)
 		{
 			super();
 			id = 0;
@@ -57,7 +58,7 @@ public class DummyTraffic implements ITraffic {
 				dateDepart += 1000;
 				//On ajoute un utilisateur.
 				//Creation d'un nouvel objet "Horloge".
-				addUser(new DummyUser(id,etageDepart,etageArrive ,dateDepart));
+				addUser(new DummyUser(elevatorUI,id,etageDepart,etageArrive ,dateDepart));
 				//On met à jour l'étage de départ du prochain utilisateur.
 				if(etageDepart != nbEtage-1)
 					etageDepart++;

@@ -7,6 +7,7 @@
  */
 package simulation.elevator.elevator.int_elevator;
 
+import simulation.elevator.commonType.Direction;
 import simulation.elevator.commonType.ElevatorState;
 
 // Start of user code to add imports for IElevatorInfo
@@ -40,8 +41,9 @@ public interface IElevatorInfo {
      * @return ret
      */
     public ElevatorState getState();
-
-	// Start of user code to add methods for IElevatorInfo
+    public void setDirection(Direction direction);
+	public void setElevatorState(ElevatorState elevatorState);
+    // Start of user code to add methods for IElevatorInfo
  
 	// End of user code
 }

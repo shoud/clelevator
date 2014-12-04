@@ -11,10 +11,9 @@ package simulation.elevator.moveOptimizer.imp_moveOptimizer;
  
 import java.util.ArrayList;
 
-import simulation.elevator.elevator.int_elevator.IElevatorInfo;
+import simulation.elevator.commonType.Direction;
+import simulation.elevator.elevator.int_elevator.IElevator;
 import simulation.elevator.elevator_UI.imp_elevator_UI.ElevatorUI;
-import simulation.elevator.elevator_UI.imp_elevator_UI.requestFactoryImplementation;
-import simulation.elevator.elevator_UI.int_elevator_UI.IRequest;
 import simulation.elevator.moveOptimizer.int_moveOptimizer.IMoveOptimizer;
 
 // End of user code
@@ -26,43 +25,26 @@ import simulation.elevator.moveOptimizer.int_moveOptimizer.IMoveOptimizer;
 
 public class DummyMoveOptimizer implements IMoveOptimizer {
 
-	IElevatorInfo elevatorInfo;
-	ArrayList<IRequest> listRequest;
+	IElevator elevator;
+	ArrayList<DummyRequetCall> listCallLevel;
+	
+	public DummyMoveOptimizer(IElevator elevator) {
+		listCallLevel = new ArrayList<DummyRequetCall>();
+		this.elevator = elevator;
+	}
 	
 	@Override
-	public void registerRequest(IRequest request){
-		requestFactoryImplementation.createRequest();
-		listRequest.add(request);
+	public void registerCallLevel(int level, Direction direction){
+		System.out.println("Bonjour je suis dans moveOptimizer  " + listCallLevel.isEmpty());
+		listCallLevel.add(new DummyRequetCall(level, direction));
+		System.out.println("Bonjour je suis dans moveOptimizer  " + listCallLevel.isEmpty());
 	}
 
 	@Override
-	public void updatePosition() {
-		
-		
-	}
-
-	/**
-	 * @uml.property  name="iRequest"
-	 * @uml.associationEnd  inverse="dummyMoveOptimizer:simulation.elevator.elevator_UI.int_elevator_UI.IRequest"
-	 */
-	private IRequest iRequest;
-
-	/**
-	 * Getter of the property <tt>iRequest</tt>
-	 * @return  Returns the iRequest.
-	 * @uml.property  name="iRequest"
-	 */
-	public IRequest getIRequest() {
-		return iRequest;
-	}
-
-	/**
-	 * Setter of the property <tt>iRequest</tt>
-	 * @param iRequest  The iRequest to set.
-	 * @uml.property  name="iRequest"
-	 */
-	public void setIRequest(IRequest iRequest) {
-		this.iRequest = iRequest;
+	public void updatePosition(){
+		//elevatorInfo = new ElevatorInfoFactory().createElevatorInfo(elevatorCommand);
+		//elevatorInfo.setDirection(Direction.DOWN);
+		//elevatorInfo.setElevatorState(ElevatorState.MOVING);
 	}
 
 	@Override
@@ -75,5 +57,18 @@ public class DummyMoveOptimizer implements IMoveOptimizer {
 	public void setElevatorUI(ElevatorUI elevatorUI) {
 		// TODO Auto-generated method stub
 		
-	}		
+	}
+
+	@Override
+	public void trigger(long t) {
+		//System.out.println("Bonjour je suis dans moveOptimizer  " + listCallLevel.isEmpty());
+		
+		if(!listCallLevel.isEmpty())
+		{
+			//for(DummyRequetCall rq : listCallLevel)
+				//System.out.println("Appel de l'ascenseur de l'étage : " + rq.getLevel() + " De direction = " + rq.getDirection());
+		}
+		
+	}
+
 }
