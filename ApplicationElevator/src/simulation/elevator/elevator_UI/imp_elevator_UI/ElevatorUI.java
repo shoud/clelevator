@@ -11,9 +11,8 @@ package simulation.elevator.elevator_UI.imp_elevator_UI;
  
 import simulation.elevator.commonType.Direction;
 import simulation.elevator.elevator_UI.int_elevator_UI.IElevatorUI;
-import simulation.elevator.elevator_UI.int_elevator_UI.IPushableButton;
-import simulation.elevator.elevator_UI.int_elevator_UI.IRequest;
 import simulation.elevator.moveOptimizer.int_moveOptimizer.IMoveOptimizer;
+import simulation.elevator.moveOptimizer.int_moveOptimizer.MoveOptimizerFactory;
 
 // End of user code
 
@@ -24,9 +23,7 @@ import simulation.elevator.moveOptimizer.int_moveOptimizer.IMoveOptimizer;
 
 public class ElevatorUI implements IElevatorUI{
 
-	IPushableButton pushableButton;
-	IRequest request;
-	IMoveOptimizer moveOptimizer;
+	IMoveOptimizer moveOptimizer = MoveOptimizerFactory.createMoveOptimizer(this);
 	
 	@Override
 	public int getLevelSelected() {
