@@ -37,7 +37,7 @@ public class DummyElevator implements IElevator {
 		this.cageState = ElevatorCageState.CLOSED;// = cageState;
 		this.elevState = ElevatorState.SLEEPING; //= elevState;
 		this.speed = 50 ; //= speed; (cm par seconde ?)
-		this.currentLevel = 0; //= currentLevel;
+		this.currentLevel = 5; //= currentLevel;
 		this.levelNb = 10; // = levelNb;
 		this.distanceBtw = 2; // =distanceBtw; // Distance entre deux étages;
 	}
@@ -142,14 +142,12 @@ public class DummyElevator implements IElevator {
 	public void trigger(long t) {
 		long currentTime = 0;
 		long time = System.currentTimeMillis(); // On récupère le temps
-		cageState = ElevatorCageState.CLOSED;
-		elevState = ElevatorState.SLEEPING; 
+		cageState = ElevatorCageState.CLOSED; 
 		/* Normalement il faut verifier que les portes soient fermées pour que l'ascenseur bouge 
 		 * et du coup verifier que l'ascenseur bouge pour commencer a le faire bouger.*/
 		int saveLevel = this.currentLevel;
-		if(direction == Direction.UP && elevState == ElevatorState.MOVING){
+		if(this.direction == Direction.UP && elevState == ElevatorState.MOVING){
 			
-			System.out.println("L'ascenseur monte");
 			
 			while (this.currentLevel != saveLevel+1 && this.currentLevel < this.levelNb){
 				
@@ -162,18 +160,16 @@ public class DummyElevator implements IElevator {
 			}
 			//return; // ************************************************** ????????????????????????????????????
 		}
-		if(direction == Direction.DOWN && elevState == ElevatorState.MOVING){
+		if(this.direction == Direction.DOWN && elevState == ElevatorState.MOVING){
 			
-			System.out.println("L'ascenseur descent");
 			
-			while (this.currentLevel != saveLevel-1 && this.currentLevel >= 0){
+			while (this.currentLevel != saveLevel-1 && this.currentLevel > 0){
 				
 				currentTime = System.currentTimeMillis() - time; 		// currentTime = le temps écoulé depuis que l'on a lancé move();
 				long currentDistance = this.speed * currentTime; 		// Nous donne la distance parcouru
 				if(currentDistance >= this.distanceBtw){
 					
 					this.currentLevel--;
-					
 				}
 			}
 			//return; // ************************************************** ????????????????????????????????????

@@ -33,7 +33,7 @@ public interface IMoveOptimizer extends IEvent {
      *
      * @param request
      */
-    public void registerCallLevel(int level, Direction direction);
+    public void registerCallLevel(int level, Direction direction, int destination);
 
     /**
      *  Description of the method updatePosition.

@@ -43,11 +43,8 @@ public class ElevatorUI implements IElevatorUI{
 
 
 	@Override
-	public void callElevator(int currentFloor, Direction direction) {
-		if(moveOptimizer == null)
-			System.out.println("Le moveOptimizer existe pas");
-		else
-			moveOptimizer.registerCallLevel(currentFloor,direction);
+	public void callElevator(int currentFloor, Direction direction, int destination) {
+		moveOptimizer.registerCallLevel(currentFloor,direction,destination);
 	}
 
 

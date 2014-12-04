@@ -30,7 +30,7 @@ public interface IPushableButton {
 	// End of user code
 
    
-    public void callElevator(int currentFloor, Direction direction);
+    public void callElevator(int currentFloor, Direction direction, int destination);
 
     public void levelPush(int level);
 

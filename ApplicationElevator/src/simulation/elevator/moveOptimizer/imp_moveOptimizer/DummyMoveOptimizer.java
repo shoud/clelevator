@@ -12,6 +12,7 @@ package simulation.elevator.moveOptimizer.imp_moveOptimizer;
 import java.util.ArrayList;
 
 import simulation.elevator.commonType.Direction;
+import simulation.elevator.commonType.ElevatorState;
 import simulation.elevator.elevator.int_elevator.IElevator;
 import simulation.elevator.elevator_UI.imp_elevator_UI.ElevatorUI;
 import simulation.elevator.moveOptimizer.int_moveOptimizer.IMoveOptimizer;
@@ -26,18 +27,20 @@ import simulation.elevator.moveOptimizer.int_moveOptimizer.IMoveOptimizer;
 public class DummyMoveOptimizer implements IMoveOptimizer {
 
 	IElevator elevator;
+	Direction direction;
 	ArrayList<DummyRequetCall> listCallLevel;
+	ArrayList<Integer> listLevel;
 	
 	public DummyMoveOptimizer(IElevator elevator) {
 		listCallLevel = new ArrayList<DummyRequetCall>();
+		listLevel = new ArrayList<Integer>();
 		this.elevator = elevator;
+		this.direction = null;
 	}
 	
 	@Override
-	public void registerCallLevel(int level, Direction direction){
-		System.out.println("Bonjour je suis dans moveOptimizer  " + listCallLevel.isEmpty());
-		listCallLevel.add(new DummyRequetCall(level, direction));
-		System.out.println("Bonjour je suis dans moveOptimizer  " + listCallLevel.isEmpty());
+	public void registerCallLevel(int level, Direction direction, int destination){
+		listCallLevel.add(new DummyRequetCall(level, direction,destination));
 	}
 
 	@Override
@@ -61,14 +64,43 @@ public class DummyMoveOptimizer implements IMoveOptimizer {
 
 	@Override
 	public void trigger(long t) {
-		//System.out.println("Bonjour je suis dans moveOptimizer  " + listCallLevel.isEmpty());
 		
-		if(!listCallLevel.isEmpty())
+		if(!listLevel.isEmpty())
 		{
-			//for(DummyRequetCall rq : listCallLevel)
-				//System.out.println("Appel de l'ascenseur de l'étage : " + rq.getLevel() + " De direction = " + rq.getDirection());
+			if(elevator.getCurrentFloor() == listLevel.get(0))
+			{
+				System.out.println("L'utilisateur est arrivé à destination à l'étage : " + listLevel.get(0));
+				listLevel.remove(0);
+			}
+			else
+			{
+				if(elevator.getCurrentFloor() - listLevel.get(0) > 0)
+					this.direction = Direction.DOWN;
+				else
+					this.direction = Direction.UP;
+				elevator.setDirection(direction);
+				elevator.setElevatorState(ElevatorState.MOVING);	
+			}
 		}
-		
+		if(!listCallLevel.isEmpty() && listLevel.isEmpty())
+		{
+			if((elevator.getCurrentFloor() == listCallLevel.get(0).getLevel()))
+			{
+				elevator.setElevatorState(ElevatorState.SLEEPING);
+				System.out.println("L'utilisateur monte dans l'ascenseur à l'étage : " + elevator.getCurrentFloor());
+				listLevel.add((listCallLevel.get(0).getDestination()));
+				listCallLevel.remove(0);
+				
+			}
+			else
+			{
+				if(elevator.getCurrentFloor() - listCallLevel.get(0).getLevel() > 0)
+					this.direction = Direction.DOWN;
+				else
+					this.direction = Direction.UP;
+				elevator.setDirection(direction);
+				elevator.setElevatorState(ElevatorState.MOVING);
+			}
+		}
 	}
-
 }

@@ -90,9 +90,7 @@ public class DummyTraffic implements ITraffic {
 			for(IUser user : listUser)
 			{
 				if((user.getDateDepart() < date) && !user.getCalled())
-				{
 					user.setCalled();
-				}
 			}
 			
 		}

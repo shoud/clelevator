@@ -52,7 +52,6 @@ public class DummyUser implements IUser, IEvent {
 	 */
 	public void display(long T)
 	{
-		System.out.println(this.id + " appel un ascenseur au " + this.etageDepart + " étage");
 	}
 	/**
 	 * Permet de renvoyer l'identifiant de l'utilisateur.
@@ -106,7 +105,7 @@ public class DummyUser implements IUser, IEvent {
 		else
 			direction = Direction.UP;
 		//L'utilisateur appui sur le bouton d'appel de l'ascenseur.
-		elevatorUI.callElevator(etageDepart,direction);
+		elevatorUI.callElevator(etageDepart,direction,etageFin);
 	}
 	/**
 	 * Permet de savoir si l'utilisateur a déjà pris l'ascenseur.
